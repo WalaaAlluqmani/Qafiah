@@ -8,107 +8,125 @@
 
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  <title>واجهة الشعراء</title>
-  <style>
-    .material-card {
-      margin: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-    .material-btn {
-      margin: 10px;
-      background-color: #2196F3;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-    }
-    .material-card-content img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    /* الهيدر */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #2196F3;
-      color: white;
-    }
-    .header .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .header nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    .header nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <title>واجهة الشعراء</title>
+    <style>
+        .material-card {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .material-btn {
+            margin: 10px;
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .material-card-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* الهيدر */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- الهيدر -->
-  <div class="header">
-    <div class="logo">شعرنا</div>
-    <nav>
-      <a href="#">الرئيسية</a>
-      <a href="#">اشئ قصيدتك</a>
-      <a href="#">نبذة عنا</a>
-    </nav>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col s12 m4">
-        <div class="material-card">
-          <button class="material-btn">شاعر 1</button>
-          <div class="material-card-content">
-            <img src="https://s3-alpha-sig.figma.com/img/acb3/e000/14d5c130e2f9406d0de7597f432c7682?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hDo3ca29LrCJrrGrWNyTNgUaedFjMjVUj2YQM7zZ-8YDQlTbbzuiUKNkQGE~WpVbOG4kW8CIl1Ea040nnbmrPTENXaT-DhUaCdnhb5NhaSCklZXjSYjgVuFDVp4GpTB~HGaPCBg1AIP49CuWA6ba849~rHKDQttCh~0b1roeZ5BcZAjVCvCAAIipkXviWYoutok--QtvL52CBu~Ih4D130l-L3sqpCt0j8r-3K3Ihrq6gqjehr6q9zonaw2hyKPs9wXSYCfZ-u~voXjdk~ADVHDG7L0kPlr8S1XPLdyu271IYNb7wp6nDNBjfK-7FJmzuraqLFDQiWAnIfoGe5y3OQ__" alt="صورة شاعر 1">
-            <p>شاعر 1: الشاعر الأول كان له تأثير كبير في الأدب العربي. قصائده تميزت بجمال اللغة والخيال الواسع.</p>
-          </div>
+    <!-- الهيدر -->
+    <div class="header">
+        <div class="logo">
+            <img src="https://s3-alpha-sig.figma.com/img/e98b/5509/c35554cbf08496dbda318db942e65255?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Bsxv-~gYEmrnlZUwgiEK3gXe0OnZcumn5S3UTvAl~NKMduAI0M1T~4BhizvxpO4F17ZBIiXOtQjfTa9NsYeIWWyASoG1fBxv1iGeEhtLtHuJGQMomoiRVsfn6B7PrCJgftPDHDE9LrTdeNuWZvlnjC8Y6Z5wtkCLD7sv3IkCG8xyFAjVUUY96L55pUY9LOjwlu0wqlADSGPXgaeiao97hp9-YbutNkF5tW1KTHxA0WtTSuaAKLirBY3HBk01Cg7eaiiQk66x5~yCBpkBrGvraTcTM2JiCUiqzxxdR-FcpIglAnI0Lf5fVLh4-3aNX7JfH0JmtNsCssk0hX3fMPIvAw__"
+            alt="logo"  width="100" height="90">
         </div>
-      </div>
-      
-      <div class="col s12 m4">
-        <div class="material-card">
-          <button class="material-btn">شاعر 2</button>
-          <div class="material-card-content">
-            <img src="https://s3-alpha-sig.figma.com/img/acb3/e000/14d5c130e2f9406d0de7597f432c7682?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hDo3ca29LrCJrrGrWNyTNgUaedFjMjVUj2YQM7zZ-8YDQlTbbzuiUKNkQGE~WpVbOG4kW8CIl1Ea040nnbmrPTENXaT-DhUaCdnhb5NhaSCklZXjSYjgVuFDVp4GpTB~HGaPCBg1AIP49CuWA6ba849~rHKDQttCh~0b1roeZ5BcZAjVCvCAAIipkXviWYoutok--QtvL52CBu~Ih4D130l-L3sqpCt0j8r-3K3Ihrq6gqjehr6q9zonaw2hyKPs9wXSYCfZ-u~voXjdk~ADVHDG7L0kPlr8S1XPLdyu271IYNb7wp6nDNBjfK-7FJmzuraqLFDQiWAnIfoGe5y3OQ__" alt="صورة شاعر 2">
-            <p>شاعر 2: الشاعر الثاني كان مشهورًا باستخدامه للألفاظ السهلة والعميقة في نفس الوقت.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col s12 m4">
-        <div class="material-card">
-          <button class="material-btn">شاعر 3</button>
-          <div class="material-card-content">
-            <img src="https://s3-alpha-sig.figma.com/img/acb3/e000/14d5c130e2f9406d0de7597f432c7682?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hDo3ca29LrCJrrGrWNyTNgUaedFjMjVUj2YQM7zZ-8YDQlTbbzuiUKNkQGE~WpVbOG4kW8CIl1Ea040nnbmrPTENXaT-DhUaCdnhb5NhaSCklZXjSYjgVuFDVp4GpTB~HGaPCBg1AIP49CuWA6ba849~rHKDQttCh~0b1roeZ5BcZAjVCvCAAIipkXviWYoutok--QtvL52CBu~Ih4D130l-L3sqpCt0j8r-3K3Ihrq6gqjehr6q9zonaw2hyKPs9wXSYCfZ-u~voXjdk~ADVHDG7L0kPlr8S1XPLdyu271IYNb7wp6nDNBjfK-7FJmzuraqLFDQiWAnIfoGe5y3OQ__" alt="صورة شاعر 3">
-            <p>شاعر 3: الشاعر الثالث تأثر بالموسيقى كثيرًا في أشعاره، مما جعلها مليئة بالإيقاع واللحون.</p>
-          </div>
-        </div>
-      </div>
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">انشئ قصيدتك</a>
+            <a href="#">نبذة عنا</a>
+        </nav>
     </div>
 
-    <div class="material-btn">
-      <button>إنشاء القصيدة</button>
-    </div>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="material-card">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                    <div class="material-card-content">
+                        <img src="https://s3-alpha-sig.figma.com/img/acb3/e000/14d5c130e2f9406d0de7597f432c7682?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hDo3ca29LrCJrrGrWNyTNgUaedFjMjVUj2YQM7zZ-8YDQlTbbzuiUKNkQGE~WpVbOG4kW8CIl1Ea040nnbmrPTENXaT-DhUaCdnhb5NhaSCklZXjSYjgVuFDVp4GpTB~HGaPCBg1AIP49CuWA6ba849~rHKDQttCh~0b1roeZ5BcZAjVCvCAAIipkXviWYoutok--QtvL52CBu~Ih4D130l-L3sqpCt0j8r-3K3Ihrq6gqjehr6q9zonaw2hyKPs9wXSYCfZ-u~voXjdk~ADVHDG7L0kPlr8S1XPLdyu271IYNb7wp6nDNBjfK-7FJmzuraqLFDQiWAnIfoGe5y3OQ__"
+                            alt="صورة شاعر 1">
+                        <p>شاعرٌ ومُفكِّر وعالم لغوي ونحويٌّ وأديب وفيلسوف من كبار أعلام الحضارة الإسلاميَّة</p>
+                        <button class="material-btn">ابو العلاء</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="material-card">
+
+                    <div class="material-card-content">
+                        <img src="https://s3-alpha-sig.figma.com/img/fc4b/dea6/91b44dcc91e40286d00ecb99090861b0?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=k-5JM0WC0hpcNn6s94c~Xl2uEse0H8xpdjJPSQ73jyayf-jY8h8WcQdyK6W9pQyLetQeWJHzfK5rztnSOEGKsgC1VGQyzCq-c4ycl~N-myhs5aKSg4-QmuguHT7DYW3DZQHB8zIGDuS5kFgli~3mT0~NsGGmPyVkhY-jNkHDK0Ydrrgl3HwNgVH6FEvUGUNtny4H9AimN7hmgh1Rc5S4NphKhE0UWDnR7itVdpu6s0kKMd8BebaN8Gc6g73MpprLZnxbVGC88L7KeAC~yy0fl3nH7jPHFgsreLbGNC0-UjXZUpB1sdxuU5Zv1DeI7Nb5D5zMR39fws4-vshIHQ2ulA__"
+                            alt="صورة شاعر 2">
+                        <p>شاعر وكاتب وأديب، عُرف بإبداعه في نظم الشعر، حيث كان له ديوان شعر كبير تم ترتيبه وفق الحروف الهجائية.</p>
+                        <button class="material-btn">ابن نباته</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="material-card">
+
+                    <div class="material-card-content">
+                        <img src="https://s3-alpha-sig.figma.com/img/63c3/6839/4aefe64d0676f59a77bb9f13986203c8?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OgS4pZRVkS3LjaWMfNgbN2vqqg2mCHxXYd~quz3nd3f9eTp3V2hkS0L423scd5Rks8Ppl1N~RvBzqos~gp5gc~F1TSlvBIBHe8xNlQ4j750dJ25qSB7wV59uwEUkLhAXq0~26PO2n6i7oyN~TNrkitGFA94GSi5U3botX8qyCT5mzXGMvhQbIB~yAUuaD95QcTIuhSMCB2fgwFCrvRnJ3XhFwHmsUzcaAnyiOZ~MblMLihpT-aQfLlS2vd2rAjO7AsFUBoNVcseGsLdxI3y5gCcNvV5IyOO-Cp64x7PJG-0mAvCn6D0NBu5fExP1HUtaLuaFYXV-~uEojdQdUIFk2A__"
+                            alt="صورة شاعر 3">
+                        <p>تميز بصدق إحساسه وابتعاده عن الرياء، وأبدع في مزج الفخر بالمدح. عُرف بإجادته الشعر، وبرز في الهجاء برسم صور ساخرة قاسية تثير الضحك.</p>
+                        <button class="material-btn">ابن الرومي</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="material-btn">
+            <button>إنشاء القصيدة</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
 </html>
