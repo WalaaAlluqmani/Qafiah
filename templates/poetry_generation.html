@@ -19,21 +19,19 @@
 
     <title>واجهة إختيار الشعراء</title>
     <style>
+        /* <!-- إضافة الخط --> */
 
-/* <!-- إضافة الخط --> */
-
-/* <!-- تطبيق الخط في CSS --> */
-body {
-    font-family: 'Amiri', serif;
-}
-
+        /* <!-- تطبيق الخط في CSS --> */
+        body {
+            font-family: 'Amiri', serif;
+        }
 
 
-
+       
         .material-card {
             margin: 10px;
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #AEA38A;
             border-radius: 10px;
             background-color: #ffffff;
         }
@@ -113,7 +111,7 @@ body {
             padding: 5px;
             background-color: #ffffff;
             color: #072A30;
-            border: 1px solid #072A30; 
+            border: 1px solid #072A30;
         }
 
 
@@ -121,7 +119,7 @@ body {
         .header .logo {
             margin: 0;
             /* إزالة المسافة حول الصورة */
-            padding: 0 10px ;
+            padding: 0 10px;
 
             /* إزالة الحشو حول الصورة */
             display: block;
@@ -193,7 +191,7 @@ body {
             /* تغيير النص إلى اللون الأبيض عند التمرير */
         }
 
-        .material-title{
+        .material-title {
             /* margin-top: 20px;
             زيادة المسافة بين المحتوى والزر */
             display: flex;
@@ -201,14 +199,11 @@ body {
             /* لضمان أن الزر في المنتصف */
             align-items: center;
             /* لضمان محاذاة الزر عموديًا */
-            background-color: transparent;
+            /* background-color: transparent; */
             /* خلفية شفافة */
             color: #072A30;
             /* لون النص بالعودي */
             font-size: 30px;
-            /* تكبير حجم النص */
-            cursor: pointer;
-            width: auto;
             text-align: center;
             margin: 20px 0;
             /* زيادة المسافة المحيطية */
@@ -218,16 +213,21 @@ body {
         }
 
         .material-btn-last:disabled {
-    background-color: #ccc; /* لون الخلفية عند التعطيل */
-    color: #666; /* لون النص عند التعطيل */
-    cursor: not-allowed; /* مؤشر غير مسموح */
-    box-shadow: none; /* إزالة الظل */
-    border: 2px solid #666;
-}
-.material-card:hover {
-    transform: scale(1.07);
-    transition: transform 0.3s ease;
-}
+            background-color: #ccc;
+            /* لون الخلفية عند التعطيل */
+            color: #666;
+            /* لون النص عند التعطيل */
+            cursor: not-allowed;
+            /* مؤشر غير مسموح */
+            box-shadow: none;
+            /* إزالة الظل */
+            border: 2px solid #666;
+        }
+
+        .material-card:hover {
+            transform: scale(1.07);
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
 
@@ -255,7 +255,7 @@ body {
                         <img src="https://s3-alpha-sig.figma.com/img/63c3/6839/4aefe64d0676f59a77bb9f13986203c8?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OgS4pZRVkS3LjaWMfNgbN2vqqg2mCHxXYd~quz3nd3f9eTp3V2hkS0L423scd5Rks8Ppl1N~RvBzqos~gp5gc~F1TSlvBIBHe8xNlQ4j750dJ25qSB7wV59uwEUkLhAXq0~26PO2n6i7oyN~TNrkitGFA94GSi5U3botX8qyCT5mzXGMvhQbIB~yAUuaD95QcTIuhSMCB2fgwFCrvRnJ3XhFwHmsUzcaAnyiOZ~MblMLihpT-aQfLlS2vd2rAjO7AsFUBoNVcseGsLdxI3y5gCcNvV5IyOO-Cp64x7PJG-0mAvCn6D0NBu5fExP1HUtaLuaFYXV-~uEojdQdUIFk2A__"
                             alt="صورة الشاعر ابن الرومي" width="194" height="270">
                         <p>تميز بصدق إحساسه وابتعاده عن الرياء، وأبدع في مزج الفخر بالمدح. عُرف بإجادته الشعر، وبرز في
-                            الهجاء برسم صور ساخرة قاسية تثير الضحك.</p>
+                            الهجاء برسم صور ساخرة قاسية تثير الضحك</p>
                         <button class="material-btn">ابن الرومي</button>
                     </div>
                 </div>
@@ -266,7 +266,7 @@ body {
                         <img src="https://s3-alpha-sig.figma.com/img/fc4b/dea6/91b44dcc91e40286d00ecb99090861b0?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=k-5JM0WC0hpcNn6s94c~Xl2uEse0H8xpdjJPSQ73jyayf-jY8h8WcQdyK6W9pQyLetQeWJHzfK5rztnSOEGKsgC1VGQyzCq-c4ycl~N-myhs5aKSg4-QmuguHT7DYW3DZQHB8zIGDuS5kFgli~3mT0~NsGGmPyVkhY-jNkHDK0Ydrrgl3HwNgVH6FEvUGUNtny4H9AimN7hmgh1Rc5S4NphKhE0UWDnR7itVdpu6s0kKMd8BebaN8Gc6g73MpprLZnxbVGC88L7KeAC~yy0fl3nH7jPHFgsreLbGNC0-UjXZUpB1sdxuU5Zv1DeI7Nb5D5zMR39fws4-vshIHQ2ulA__"
                             alt="صورة الشاعر ابن نباته" width="209" height="292">
                         <p>شاعر وكاتب وأديب، عُرف بإبداعه في نظم الشعر، حيث كان له ديوان شعر كبير تم ترتيبه وفق الحروف
-                            الهجائية.</p>
+                            الهجائية</p>
                         <button class="material-btn">ابن نباته</button>
                     </div>
                 </div>
@@ -309,38 +309,38 @@ body {
 
 
 
-// الحصول على الزر الأخير وزر الاختيار
-const createButton = document.querySelector('.material-btn-last');
-const buttons = document.querySelectorAll('.material-btn');
+    // الحصول على الزر الأخير وزر الاختيار
+    const createButton = document.querySelector('.material-btn-last');
+    const buttons = document.querySelectorAll('.material-btn');
 
-// تعطيل الزر افتراضيًا
-createButton.disabled = true;
+    // تعطيل الزر افتراضيًا
+    createButton.disabled = true;
 
-// متغير لتتبع حالة الاختيار
-let isTypeSelected = false;
+    // متغير لتتبع حالة الاختيار
+    let isTypeSelected = false;
 
-// إضافة حدث عند الضغط على أي زر من الأنواع
-buttons.forEach(button => {
-    button.addEventListener('click', function () {
-        // إزالة الفئة "selected" من جميع الأزرار
-        buttons.forEach(btn => btn.classList.remove('selected'));
+    // إضافة حدث عند الضغط على أي زر من الأنواع
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            // إزالة الفئة "selected" من جميع الأزرار
+            buttons.forEach(btn => btn.classList.remove('selected'));
 
-        // إضافة الفئة "selected" للزر الذي تم الضغط عليه
-        this.classList.add('selected');
+            // إضافة الفئة "selected" للزر الذي تم الضغط عليه
+            this.classList.add('selected');
 
-        // تفعيل الزر "إنشئ قصيدتك"
-        isTypeSelected = true;
-        createButton.disabled = false; // تفعيل الزر
+            // تفعيل الزر "إنشئ قصيدتك"
+            isTypeSelected = true;
+            createButton.disabled = false; // تفعيل الزر
+        });
     });
-});
 
-// التأكد عند الضغط على الزر الأخير إذا لم يتم اختيار نوع
-createButton.addEventListener('click', function (event) {
-    if (!isTypeSelected) {
-        event.preventDefault(); // منع الإجراء
-        alert('يرجى اختيار نوع قبل إنشاء القصيدة!');
-    }
-});
+    // التأكد عند الضغط على الزر الأخير إذا لم يتم اختيار نوع
+    createButton.addEventListener('click', function (event) {
+        if (!isTypeSelected) {
+            event.preventDefault(); // منع الإجراء
+            alert('يرجى اختيار نوع قبل إنشاء القصيدة!');
+        }
+    });
 
 
 </script>
