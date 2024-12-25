@@ -14,8 +14,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+
+
     <title>واجهة إختيار الشعراء</title>
     <style>
+
+/* <!-- إضافة الخط --> */
+
+/* <!-- تطبيق الخط في CSS --> */
+body {
+    font-family: 'Amiri', serif;
+}
+
+
+
 
         .material-card {
             margin: 10px;
@@ -49,6 +62,7 @@
             transition: box-shadow 0.3s ease;
             /* تأثير الظل عند التبديل */
             margin-top: 10px;
+            font-family: 'Amiri', serif;
             /* لإضافة مسافة بين المحتوى والزر */
         }
 
@@ -96,17 +110,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 5px;
             background-color: #ffffff;
             color: #072A30;
-            border: 1px solid #072A30;
-            padding: 20px;
+            border: 1px solid #072A30; 
         }
+
+
 
         .header .logo {
             margin: 0;
             /* إزالة المسافة حول الصورة */
-            padding: 0;
+            padding: 0 10px ;
+
             /* إزالة الحشو حول الصورة */
             display: block;
         }
@@ -118,13 +134,16 @@
             /* إزالة أي ظل موجود */
             border: none;
             /* إزالة أي حدود */
+            padding: 0;
+            margin: 0;
         }
 
         .header nav a {
             color: #072A30;
-            margin-left: 20px;
+            margin-left: 30px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 20px;
+            padding: 0;
         }
 
         .header nav a:hover {
@@ -163,7 +182,8 @@
             /* زيادة المسافة المحيطية */
             /* transition: all 0.3s ease; */
             margin-left: auto;
-            margin-right: auto
+            margin-right: auto;
+            font-family: 'Amiri', serif;
         }
 
         .material-btn-last:hover {
@@ -173,6 +193,41 @@
             /* تغيير النص إلى اللون الأبيض عند التمرير */
         }
 
+        .material-title{
+            /* margin-top: 20px;
+            زيادة المسافة بين المحتوى والزر */
+            display: flex;
+            justify-content: center;
+            /* لضمان أن الزر في المنتصف */
+            align-items: center;
+            /* لضمان محاذاة الزر عموديًا */
+            background-color: transparent;
+            /* خلفية شفافة */
+            color: #072A30;
+            /* لون النص بالعودي */
+            font-size: 30px;
+            /* تكبير حجم النص */
+            cursor: pointer;
+            width: auto;
+            text-align: center;
+            margin: 20px 0;
+            /* زيادة المسافة المحيطية */
+            /* transition: all 0.3s ease; */
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .material-btn-last:disabled {
+    background-color: #ccc; /* لون الخلفية عند التعطيل */
+    color: #666; /* لون النص عند التعطيل */
+    cursor: not-allowed; /* مؤشر غير مسموح */
+    box-shadow: none; /* إزالة الظل */
+    border: 2px solid #666;
+}
+.material-card:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s ease;
+}
     </style>
 </head>
 
@@ -192,6 +247,7 @@
     </div>
 
     <div class="container">
+        <div class="material-title">إختر الشاعر</div>
         <div class="row">
             <div class="col s12 m4">
                 <div class="material-card">
@@ -238,16 +294,53 @@
 
 <script>
     // الحصول على جميع الأزرار
-    const buttons = document.querySelectorAll('.material-btn');
+    // const buttons = document.querySelectorAll('.material-btn');
 
-    // إضافة حدث عند الضغط على أي زر
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            // إزالة الفئة "selected" من جميع الأزرار
-            buttons.forEach(btn => btn.classList.remove('selected'));
+    // // إضافة حدث عند الضغط على أي زر
+    // buttons.forEach(button => {
+    //     button.addEventListener('click', function () {
+    //         // إزالة الفئة "selected" من جميع الأزرار
+    //         buttons.forEach(btn => btn.classList.remove('selected'));
 
-            // إضافة الفئة "selected" للزر الذي تم الضغط عليه
-            this.classList.add('selected');
-        });
+    //         // إضافة الفئة "selected" للزر الذي تم الضغط عليه
+    //         this.classList.add('selected');
+    //     });
+    // });
+
+
+
+// الحصول على الزر الأخير وزر الاختيار
+const createButton = document.querySelector('.material-btn-last');
+const buttons = document.querySelectorAll('.material-btn');
+
+// تعطيل الزر افتراضيًا
+createButton.disabled = true;
+
+// متغير لتتبع حالة الاختيار
+let isTypeSelected = false;
+
+// إضافة حدث عند الضغط على أي زر من الأنواع
+buttons.forEach(button => {
+    button.addEventListener('click', function () {
+        // إزالة الفئة "selected" من جميع الأزرار
+        buttons.forEach(btn => btn.classList.remove('selected'));
+
+        // إضافة الفئة "selected" للزر الذي تم الضغط عليه
+        this.classList.add('selected');
+
+        // تفعيل الزر "إنشئ قصيدتك"
+        isTypeSelected = true;
+        createButton.disabled = false; // تفعيل الزر
     });
+});
+
+// التأكد عند الضغط على الزر الأخير إذا لم يتم اختيار نوع
+createButton.addEventListener('click', function (event) {
+    if (!isTypeSelected) {
+        event.preventDefault(); // منع الإجراء
+        alert('يرجى اختيار نوع قبل إنشاء القصيدة!');
+    }
+});
+
+
 </script>
