@@ -1,0 +1,229 @@
+body, html {
+  height: 100%; /* تأكد من أن الجسم يمتد ليملأ الشاشة */
+  margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* محاذاة المحتوى عموديًا في المنتصف */
+  align-items: center; /* محاذاة المحتوى أفقيًا في المنتصف */
+  height: 100%; /* تأكد من أن الحاوية تأخذ كل ارتفاع الصفحة */
+}
+
+
+.header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #ffffff;
+    color: #072A30;
+    border-bottom: 1px solid #072A30;
+    position: fixed; /* يجعل الهيدر ثابتة */
+    top: 0; /* يضمن أن تكون في أعلى الصفحة */
+    left: 0; /* يضمن أن تكون في الزاوية اليسرى */
+    right: 0; /* يضمن أن تمتد عبر الصفحة */
+    z-index: 1000; /* يجعلها فوق العناصر الأخرى */
+
+}
+
+.header .logo {
+  margin: 0;
+  padding: 0 20px;
+  display: block;
+}
+
+.header nav {
+  background-color: #ffffff;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header nav a {
+  color: #072A30;
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+  color: #7A303F;
+}
+
+
+/* الصورة الخلفية */
+.image-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0%;
+  background: url("C:/Users/wloow/Dropbox/PC/Desktop/Qafiah System/Qafiah/assets/images/displayBackground.svg") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.material-card {
+  width: 45%; /* يجعل عرض البطاقة يعتمد على المحتوى */
+  max-width: 90%; /* عرض أقصى لتجنب تجاوز الشاشة */
+  padding: 20px; /* زيادة الحشو لجعل النص يظهر بشكل جيد */
+  border: 1px solid #AEA38A;
+  border-radius: 10px;
+  background-color: #ffffff;
+  text-align: center; /* محاذاة النص في المنتصف */
+  margin-top: 12%;
+  margin-bottom: 4%;
+  box-shadow: 0 0 20px rgba(19, 19, 19, 0.4);
+}
+
+.material-card-content {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column; /* ترتيب المحتويات عموديًا */
+  align-items: center; /* محاذاة المحتويات في المنتصف */
+  justify-content: center; /* محاذاة المحتويات في المنتصف */
+}
+.material-btn-last {
+  border: 2px solid #7A303F;
+  padding: 10px 20px; /* تعديل الحشو ليكون أقل */
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Amiri', serif;
+  background-color: #7A303FFA;
+  color: white;
+  transition: background-color 0.3s, color 0.3s; /* إضافة تأثير انتقال */
+}
+
+.material-btn-last:hover {
+  background-color: #7A303F;
+  color: white;
+  box-shadow: 0 0 20px rgba(122, 48, 63, 0.8), 0 0 30px rgba(122, 48, 63, 0.4);
+}
+
+
+.material-btn-last:active {
+  background-color: rgba(121, 69, 79, 0.8); /* اللون عند الضغط، مع تقليل الشفافية */
+  color: white;
+  box-shadow: 0 0 15px rgba(122, 48, 63, 0.6), 0 0 25px rgba(122, 48, 63, 0.3); /* ظل أخف */
+}
+
+
+.footer {
+  background-color: #072A30;
+  color: white;
+  padding: 10px;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex; /* استخدام flexbox لجعل العناصر في سطر واحد */
+  justify-content: space-between; /* توزيع العناصر بحيث يكون كل منها في أقصى طرف */
+  align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+}
+
+.social-icons {
+  display: flex; /* استخدام flexbox لرصف الأيقونات */
+  gap: 10px; /* إضافة مسافة بين الأيقونات */
+  justify-items: left;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+.footer-text {
+  text-align: right; /* محاذاة النص إلى اليمين */
+  justify-content: right;
+}
+/* 
+ .overlay-text {
+  
+  position: absolute;
+  
+  top: 50%;
+  
+  left: 50%;
+ 
+  transform: translate(-50%, -50%);
+ 
+  color: rgb(0, 0, 0);
+ 
+  text-align: center;
+ 
+  font-size: 24px;
+  font-family: 'Amiri', serif;
+} 
+.poem-image {
+  background: url("C:/Users/wloow/Dropbox/PC/Desktop/Qafiah System/Qafiah/assets/images/poem_background.png") no-repeat center center;
+  background-size: cover;
+  width: 200px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  filter: drop-shadow(0px 4px 20px rgba(125, 121, 121, 0.6)); 
+}  */
+/*
+.stand-image,
+.Vase-image,
+.main-image,
+.small-image {
+  position: absolute;
+  z-index: 1;
+}
+
+.stand-image {
+  left: 70px;
+  top: 70%;
+  transform: translateY(-55%) translateX(5.5%);
+}
+
+.Vase-image {
+  left: 70px;
+  top: 80%;
+  transform: translateY(-35.5%) translateX(4%);
+}
+
+.main-image {
+  top: 40%;
+  right: 10px;
+  transform: translateY(25%) translateX(42%);
+}
+.small-image {
+  top: 60%;
+  right: 5px;
+  transform: translateY(27%) translateX(34%);
+}
+
+.main-image img {
+  width: 45%;
+  height: auto;
+}
+
+.small-image img {
+  width: 30%;
+  height: auto;
+}
+
+.stand-image img,
+.Vase-image img {
+  width: 20%;
+  height: auto;
+}
+*/
