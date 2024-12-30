@@ -38,7 +38,11 @@
                 <p>وإن كان لي دار، فحبك داري</p>
             </div>
         </div>
-        <div> <button class="material-btn-last">أعد إنشاء القصيدة</button></div>
+        <div> <button class="material-btn-last" onclick="showSpinner()">أعد إنشاء القصيدة</button></div>
+
+        <div class="overlay" id="overlay">
+            <div class="loader"></div>
+        </div>
     </div>
 
     <footer class="footer">
@@ -86,7 +90,7 @@
                 </div>  -->
 
 
-                <!-- <div class="col s12 m4">
+<!-- <div class="col s12 m4">
 
                     <div class="stand-image">
                         <img src="C:/Users/wloow/Dropbox/PC/Desktop/Qafiah System/Qafiah/assets/images/stand_display.png"
