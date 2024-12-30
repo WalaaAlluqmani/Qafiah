@@ -22,12 +22,11 @@ buttons.forEach(button => {
     });
 });
 
-// Check when pressing the "انشئ قصيدتك" button if no type is selected
-createButton.addEventListener('click', function (event) {
-    // If no type is selected, the "انشئ قصيدتك" button will not be pressed.
+// Check when the mouse hovers over the "انشئ قصيدتك" button if no type is selected
+createButton.addEventListener('mouseenter', function (event) {
+    // If no type is selected, the "انشئ قصيدتك" button will show an alert and will not be pressed.
     if (!isTypeSelected) {
-        alert('يرجى اختيار نوع قبل إنشاء القصيدة!');
+        alert("يرجى إختيار نوع الشاعر قبل إنشاء القصيدة !!");
         event.preventDefault();
     }
-
 });
