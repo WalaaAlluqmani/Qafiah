@@ -71,7 +71,7 @@ body, html {
   height: 100%;
   left: 0;
   top: 0%;
-  background:  url_for('assets', path='images/displayBackground.svg')  no-repeat center center;
+    background: url("/assets/images/displayBackground.svg") no-repeat center center;
   background-size: cover;
   z-index: -1;
 }
