@@ -2,51 +2,43 @@
 <!-- Hi i am leena -->
 
 <!DOCTYPE html>
+
+<!-- This defines the language of the page as Arabic (ar) -->
 <html lang="ar">
 
 <head>
-    <meta charset="UTF-8">
-    <!-- رابط لتزبيط الكاردز -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <!-- رابط نوع الخط المستخدم -->
-    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
 
+    <!-- Link to use the cards (material) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Link of the type of font used -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <!-- Link of the icons used in the footer -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <!-- ربط الستايل شيت بالواجهه -->
+    <!-- To link the CSS code to the interface -->
     <link href="{{ url_for('static', path='StyleSheets/poetry_generation.css') }}" rel="stylesheet">
     
-
-    
-    
-
+    <!-- the page title -->
     <title>واجهة إختيار الشعراء</title>
-    <style>
-        /* <!-- إضافة الخط --> */
-
-        /* <!-- تطبيق الخط في CSS --> */
-        
-    </style>
+    
 </head>
 
-<body>
-    <!-- width="90" height="80" -->
 
-    <!-- الهيدر -->
+<body>
+
+    <!-- header -->
     <div class="header">
+        <!-- navigation bar -->
         <nav>
             <a href="#">الرئيسية</a>
             <a href="#">انشئ قصيدتك</a>
             <a href="#">نبذة عنا</a>
         </nav>
         <div class="logo">
-
-
-                <img src="/static/images/qafiah_logo.png" alt="شعار قافية" width="70" height="65">
-
-
-
+                <img src="/static/images/qafiah_logo.png" 
+                alt="qafiah logo" width="70" height="65">
         </div>
     </div>
+
 
     <div class="container">
         <div class="material-title">إختر الشاعر</div>
@@ -89,6 +81,7 @@
         <a href="/select"><button class="material-btn-last">إنشئ قصيدتك</button></a>
     </div>
 
+    <!-- footer -->
     <footer class="footer">
         <div class="container">
             <div class="social-icons">
@@ -108,7 +101,6 @@
 
 
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <!-- ربط كود الجافاسكربت بالواجهه -->
     <script src="static/JavaScript/poetry_generation.js"></script>
 </body>
