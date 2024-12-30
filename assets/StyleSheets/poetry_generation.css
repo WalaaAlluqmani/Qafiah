@@ -1,0 +1,248 @@
+body {
+    font-family: 'Amiri', serif;
+}
+
+.material-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #AEA38A;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.selected {
+    box-shadow: 0 0 20px rgba(122, 48, 63, 0.8), 0 0 30px rgba(122, 48, 63, 04);
+    /* زيادة قوة الظل */
+}
+
+.material-btn {
+    margin: 10px;
+    background-color: #7A303FFA;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    /* لضمان أن الزر في المنتصف */
+    align-items: center;
+    /* لضمان محاذاة الزر عموديًا */
+    font-size: 18px;
+    width: auto;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    /* تأثير الظل عند التبديل */
+    margin-top: 10px;
+    font-family: 'Amiri', serif;
+    /* لإضافة مسافة بين المحتوى والزر */
+}
+
+.material-btn:hover {
+    background-color: #7A303F;
+    /* تغيير الخلفية للعودي عند التمرير */
+    color: white;
+    /* تغيير النص إلى اللون الأبيض عند التمرير */
+    box-shadow: 0 0 20px rgba(122, 48, 63, 0.8), 0 0 30px rgba(122, 48, 63, 0.4);
+    /* زيادة قوة الظل */
+}
+
+/* .material-card {
+    flex: 1;  
+    min-width: 280px;  
+    max-width: 350px;  
+    height: 100%;  
+} */
+
+.material-card-content {
+    position: relative;
+    /* ضمان أن الأزرار تظهر أسفل المحتوى */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.material-card-content img {
+    /* width: 100%; */
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #ffffff;
+    color: #072A30;
+    
+border-bottom: 1px solid #072A30;
+
+}
+
+
+
+.header .logo {
+    margin: 0;
+    /* إزالة المسافة حول الصورة */
+    padding: 0 10px;
+
+    /* إزالة الحشو حول الصورة */
+    display: block;
+}
+
+.header nav {
+    background-color: #ffffff;
+    /* هنا يمكنك تغيير اللون حسب رغبتك */
+    box-shadow: none;
+    /* إزالة أي ظل موجود */
+    border: none;
+    /* إزالة أي حدود */
+    padding: 0;
+    margin: 0;
+}
+
+.header nav a {
+    color: #072A30;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #FBF9EC;
+    /* اختر اللون الذي تريده */
+}
+
+.material-btn-last {
+    margin-top: 20px;
+    /* زيادة المسافة بين المحتوى والزر */
+    display: flex;
+    justify-content: center;
+    /* لضمان أن الزر في المنتصف */
+    align-items: center;
+    /* لضمان محاذاة الزر عموديًا */
+    background-color: transparent;
+    /* خلفية شفافة */
+    border: 2px solid #7A303F;
+    /* لون الحواف بالعودي */
+    color: #7A303F;
+    /* لون النص بالعودي */
+    padding: 15px 40px;
+    /* زيادة الحجم والطول */
+    border-radius: 50px;
+    /* حواف دائرية */
+    font-size: 20px;
+    /* تكبير حجم النص */
+    cursor: pointer;
+    width: auto;
+    text-align: center;
+    margin: 20px 0;
+    /* زيادة المسافة المحيطية */
+    /* transition: all 0.3s ease; */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Amiri', serif;
+}
+
+.material-btn-last:hover {
+    background-color: #7A303F;
+    /* تغيير الخلفية للعودي عند التمرير */
+    color: white;
+    /* تغيير النص إلى اللون الأبيض عند التمرير */
+}
+
+.material-title {
+    /* margin-top: 20px;
+    زيادة المسافة بين المحتوى والزر */
+    display: flex;
+    justify-content: center;
+    /* لضمان أن الزر في المنتصف */
+    align-items: center;
+    /* لضمان محاذاة الزر عموديًا */
+    /* background-color: transparent; */
+    /* خلفية شفافة */
+    color: #072A30;
+    /* لون النص بالعودي */
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+    /* زيادة المسافة المحيطية */
+    /* transition: all 0.3s ease; */
+    margin-left: auto;
+    margin-right: auto
+}
+
+.material-btn-last:disabled {
+    background-color: rgb(216, 214, 214);
+    /* لون الخلفية عند التعطيل */
+    color: #666;
+    /* لون النص عند التعطيل */
+    cursor: not-allowed;
+    /* مؤشر غير مسموح */
+    box-shadow: none;
+    /* إزالة الظل */
+    border: 2px solid rgb(144, 144, 144);
+}
+
+.material-card:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s ease;
+}
+
+
+.footer {
+    background-color: #072A30;
+    color: white;
+    padding: 10px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* استخدام flexbox لجعل العناصر في سطر واحد */
+    justify-content: space-between;
+    /* توزيع العناصر بحيث يكون كل منها في أقصى طرف */
+    align-items: center;
+    /* محاذاة العناصر عموديًا في المنتصف */
+}
+
+.social-icons {
+    display: flex;
+    /* استخدام flexbox لرصف الأيقونات */
+    gap: 10px;
+    /* إضافة مسافة بين الأيقونات */
+    justify-items: left;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+.footer-text {
+    text-align: right;
+    /* محاذاة النص إلى اليمين */
+    justify-content: right;
+}
