@@ -1,36 +1,33 @@
 
-    // الحصول على الزر الأخير وزر الاختيار
-    const createButton = document.querySelector('.material-btn-last');
-    const buttons = document.querySelectorAll('.material-btn');
+// Buttons definition
+const createButton = document.querySelector('.material-btn-last');
+const buttons = document.querySelectorAll('.material-btn');
 
-    // تعطيل الزر افتراضيًا
-    createButton.disabled = true;
+// Disable the button by default
+createButton.disabled = true;
 
-    // متغير لتتبع حالة الاختيار
-    let isTypeSelected = false;
+// Variable to track selection status
+let isTypeSelected = false;
 
-    // إضافة حدث عند الضغط على أي زر من الأنواع
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            // إزالة الفئة "selected" من جميع الأزرار
-            buttons.forEach(btn => btn.classList.remove('selected'));
-
-            // إضافة الفئة "selected" للزر الذي تم الضغط عليه
-            this.classList.add('selected');
-
-            // تفعيل الزر "إنشئ قصيدتك"
-            isTypeSelected = true;
-            createButton.disabled = false; // تفعيل الزر
-        });
+// An event when any button of the types is pressed
+buttons.forEach(button => {
+    button.addEventListener('click', function () {
+        // Remove the "selected" class from all buttons
+        buttons.forEach(btn => btn.classList.remove('selected'));
+        // Add the "selected" class to the button that was pressed.
+        this.classList.add('selected');
+        // Activate the "انشئ قصيدتك" button
+        isTypeSelected = true;
+        createButton.disabled = false;
     });
+});
 
-    // التأكد عند الضغط على الزر الأخير إذا لم يتم اختيار نوع
-    createButton.addEventListener('click', function (event) {
-        if (!isTypeSelected) {
-            alert('يرجى اختيار نوع قبل إنشاء القصيدة!');
-            event.preventDefault(); // منع الإجراء
-            
-        }
+// Check when pressing the "انشئ قصيدتك" button if no type is selected
+createButton.addEventListener('click', function (event) {
+    // If no type is selected, the "انشئ قصيدتك" button will not be pressed.
+    if (!isTypeSelected) {
+        alert('يرجى اختيار نوع قبل إنشاء القصيدة!');
+        event.preventDefault();
+    }
 
-    });
-
+});

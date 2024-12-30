@@ -6,103 +6,108 @@
 <!-- This defines the language of the page as Arabic (ar) -->
 <html lang="ar">
 
-<head>
+    <head>
 
-    <!-- Link to use the cards (material) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <!-- Link of the type of font used -->
-    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
-    <!-- Link of the icons used in the footer -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <!-- To link the CSS code to the interface -->
-    <link href="{{ url_for('static', path='StyleSheets/poetry_generation.css') }}" rel="stylesheet">
-    
-    <!-- the page title -->
-    <title>واجهة إختيار الشعراء</title>
-    
-</head>
+        <!-- Link to use the cards (material) -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+        <!-- Link of the type of font used -->
+        <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+        <!-- Link of the icons used in the footer -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- To link the CSS code to the interface -->
+        <link href="{{ url_for('static', path='StyleSheets/poetry_generation.css') }}" rel="stylesheet">
 
+        <!-- the page title -->
+        <title>واجهة إختيار الشعراء</title>
 
-<body>
-
-    <!-- header -->
-    <div class="header">
-        <!-- navigation bar -->
-        <nav>
-            <a href="#">الرئيسية</a>
-            <a href="#">انشئ قصيدتك</a>
-            <a href="#">نبذة عنا</a>
-        </nav>
-        <div class="logo">
-                <img src="/static/images/qafiah_logo.png" 
-                alt="qafiah logo" width="70" height="65">
-        </div>
-    </div>
+    </head>
 
 
-    <div class="container">
-        <div class="material-title">إختر الشاعر</div>
-        <div class="row">
-            <div class="col s12 m4">
-                <div class="material-card">
-                    <div class="material-card-content">
-                        <img src="static/images/poetry_generation_interface/ibn_alromi.png"
-                            alt="صورة الشاعر ابن الرومي" width="194" height="270">
-                        <p>تميز بصدق إحساسه وابتعاده عن الرياء، وأبدع في مزج الفخر بالمدح. عُرف بإجادته الشعر، وبرز في
-                            الهجاء برسم صور ساخرة قاسية تثير الضحك</p>
-                        <button class="material-btn">ابن الرومي</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4">
-                <div class="material-card">
-                    <div class="material-card-content">
-                        <img src="static/images/poetry_generation_interface/ibn_nabata.png"
-                            alt="صورة الشاعر ابن نباته" width="209" height="292">
-                        <p>شاعر وكاتب وأديب، عُرف بإبداعه في نظم الشعر، حيث كان له ديوان شعر كبير تم ترتيبه وفق الحروف
-                            الهجائية</p>
-                        <button class="material-btn">ابن نباته</button>
-                    </div>
-                </div>
+    <body>
 
-            </div>
-
-            <div class="col s12 m4">
-                <div class="material-card">
-                    <div class="material-card-content">
-                        <img src="static/images/poetry_generation_interface/abo_alalaa.png"
-                            alt="صورة الشاعر ابو العلاء" width="288" height="288">
-                        <p>شاعرٌ ومُفكِّر وعالم لغوي ونحويٌّ وأديب وفيلسوف من كبار أعلام الحضارة الإسلاميَّة</p>
-                        <button class="material-btn">ابو العلاء</button>
-                    </div>
-                </div>
+        <!-- header -->
+        <div class="header">
+            <!-- navigation bar -->
+            <nav>
+                <a href="#">الرئيسية</a>
+                <a href="#">انشئ قصيدتك</a>
+                <a href="#">نبذة عنا</a>
+            </nav>
+            <div class="logo">
+                <img src="/static/images/qafiah_logo.png" alt="qafiah logo" width="70" height="65">
             </div>
         </div>
-        <a href="/select"><button class="material-btn-last">إنشئ قصيدتك</button></a>
-    </div>
 
-    <!-- footer -->
-    <footer class="footer">
+
+        <!-- cards of the poets -->
         <div class="container">
-            <div class="social-icons">
-                <a href="https://linktr.ee/yourusername" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:teamqafiah@gamil.com">
-                    <i class="fas fa-envelope"></i>
-                </a>
+
+            <div class="material-title">إختر الشاعر</div>
+
+            <div class="row">
+
+                <div class="col s12 m4">
+                    <div class="material-card">
+                        <div class="material-card-content">
+                            <img src="static/images/poetry_generation_interface/ibn_alromi.png" alt="صورة الشاعر ابن الرومي"
+                                width="194" height="270">
+                            <p>تميز بصدق إحساسه وابتعاده عن الرياء، وأبدع في مزج الفخر بالمدح. عُرف بإجادته الشعر، وبرز في
+                                الهجاء برسم صور ساخرة قاسية تثير الضحك</p>
+                            <button class="material-btn">ابن الرومي</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="material-card">
+                        <div class="material-card-content">
+                            <img src="static/images/poetry_generation_interface/ibn_nabata.png" alt="صورة الشاعر ابن نباته"
+                                width="209" height="292">
+                            <p>شاعر وكاتب وأديب، عُرف بإبداعه في نظم الشعر، حيث كان له ديوان شعر كبير تم ترتيبه وفق الحروف
+                                الهجائية</p>
+                            <button class="material-btn">ابن نباته</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="material-card">
+                        <div class="material-card-content">
+                            <img src="static/images/poetry_generation_interface/abo_alalaa.png" alt="صورة الشاعر ابو العلاء"
+                                width="288" height="288">
+                            <p>شاعرٌ ومُفكِّر وعالم لغوي ونحويٌّ وأديب وفيلسوف من كبار أعلام الحضارة الإسلاميَّة</p>
+                            <button class="material-btn">ابو العلاء</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <p class="footer-text">© فريق قافية 2024</p>
+
+            <!-- button to go to the output interface to display the poem -->
+            <a href="/select">
+                <button class="material-btn-last">إنشئ قصيدتك</button>
+            </a>
+
         </div>
-    </footer>
 
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="social-icons">
+                    <a href="https://linktr.ee/yourusername" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:teamqafiah@gamil.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p class="footer-text">© فريق قافية 2024</p>
+            </div>
+        </footer>
 
-    </div>
+        <!-- To link the JS code to the interface -->
+        <script src="static/JavaScript/poetry_generation.js"></script>
 
-
-
-    <!-- ربط كود الجافاسكربت بالواجهه -->
-    <script src="static/JavaScript/poetry_generation.js"></script>
-</body>
+    </body>
 
 </html>
