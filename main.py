@@ -29,20 +29,20 @@ async def read_root(request: Request):
 
 
 
-from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse
-from fastapi.requests import Request
+# from fastapi import FastAPI
+# from fastapi.staticfiles import StaticFiles
+# from fastapi.templating import Jinja2Templates
+# from fastapi.responses import HTMLResponse
+# from fastapi.requests import Request
 
-app = FastAPI()
+# app = FastAPI()
 
-# Mount the static folder
-app.mount("/assets", StaticFiles(directory="assets"), name="assets")
+# # Mount the static folder
+# app.mount("/assets", StaticFiles(directory="assets"), name="assets")
 
-# Setup templates folder
-templates = Jinja2Templates(directory="templates")
+# # Setup templates folder
+# templates = Jinja2Templates(directory="templates")
 
-@app.get("/", response_class=HTMLResponse)
-async def home(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+# @app.get("/", response_class=HTMLResponse)
+# async def home(request: Request):
+#     return templates.TemplateResponse("poetry_generation.html", {"request": request})
