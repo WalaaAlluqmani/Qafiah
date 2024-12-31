@@ -173,7 +173,7 @@ body {
     padding: 10px;
 }
 
-.footer .container-footer {
+.footer .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
