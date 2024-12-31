@@ -166,38 +166,48 @@ body {
 }
 
 /* -------------------------- footer -------------------------- */
-
 .footer {
     background-color: #072A30;
     color: white;
     padding: 10px;
-}
-
-.footer .container {
+  }
+  
+  .footer .container-footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    justify-items: center;
     align-items: center;
-}
-
-.social-icons {
+  }
+  
+  .social-icons {
     display: flex;
     gap: 10px;
+    padding: 0 30px;
     justify-items: left;
-}
-
-.social-icons a {
+  }
+  
+  .social-icons a {
     color: white;
     font-size: 20px;
     text-decoration: none;
-}
-
-.social-icons a:hover {
+  }
+  
+  .social-icons a:hover {
     color: #ccc;
-}
-
-.footer-text {
+  }
+  
+  .footer-text {
     text-align: right;
     justify-content: right;
-}
+    padding: 0 30px;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
