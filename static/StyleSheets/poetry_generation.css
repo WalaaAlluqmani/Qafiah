@@ -201,7 +201,7 @@ body {
 .social-icons {
     display: flex;
     gap: 10px;
-    padding: 0 30px;
+    padding: 0 10px;
     justify-items: left;
 }
 
@@ -218,7 +218,7 @@ body {
 .footer-text {
     text-align: right;
     justify-content: right;
-    padding-right: 30px;
+    padding-right: 0;
 }
 
 .container {

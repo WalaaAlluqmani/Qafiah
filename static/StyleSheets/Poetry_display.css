@@ -6,17 +6,12 @@
 
 body,
 html {
+  height: 100%;
   margin: 0;
+  font-family: 'Amiri', serif;
   background-color: #FBF9EC;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
 
 .header {
   display: flex;
@@ -60,29 +55,38 @@ html {
   color: #7A303F;
 }
 
-.image-bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: url("/static/images/poetry_display_interface/displayBackground1.svg") no-repeat center center;
-  background-size: cover;
-  z-index: -1;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
 }
 
+.image-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  left: 0;
+  top: 0.5%;
+  background: url("/static/images/poetry_display_interface/displayBackground.svg") no-repeat center center;
+  background-size: cover;
+  z-index: -1; 
+  border-bottom: 1px solid #FBF9EC;
+}
 
 .material-card {
-  width: 45%;
-  max-width: 90%;
-  padding: 20px;
-  border: 1px solid #AEA38A;
-  border-radius: 10px;
-  background-color: #ffffff;
+  width: 50%; 
+  height: 50%; 
+  background-color: transparent;
+  background-image: url("/static/images/poetry_display_interface/poem_background.png");
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat;
   text-align: center;
-  margin-top: 12%;
-  margin-bottom: 4%;
-  box-shadow: 0 0 20px rgba(19, 19, 19, 0.4);
+  margin-top: 8%;
+  margin-bottom: 2%;
+  display: inline-block; 
 }
 
 .material-card-content {
@@ -91,6 +95,7 @@ html {
   align-items: center;
   justify-content: center;
   font-family: 'Amiri', serif;
+  margin-top: 9%;
 }
 
 .material-btn-last {
@@ -206,7 +211,6 @@ html {
   background-color: #072A30;
   color: white;
   padding: 10px;
-  border-top: 2px solid #FBF9EC;
 }
 
 .footer .container-footer {
@@ -225,14 +229,14 @@ html {
 }
 
 .feather-icon {
-  width: 20px;
+  width: 20px; 
   margin-bottom: 2%;
 }
 
 .social-icons {
   display: flex;
   gap: 10px;
-  padding: 0 30px;
+  padding: 0 10px;
   justify-items: left;
 }
 
@@ -249,7 +253,7 @@ html {
 .footer-text {
   text-align: right;
   justify-content: right;
-  padding-right: 30px;
+  padding-right: 0;
 }
 
 
