@@ -7,9 +7,10 @@
 body,
 html {
   height: 100%;
+  width: 100%;
   margin: 0;
-  font-family: 'Amiri', serif;
   background-color: #FBF9EC;
+  overflow: hidden;
 }
 
 .container {
@@ -18,6 +19,7 @@ html {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 .header {
@@ -63,7 +65,7 @@ html {
 }
 
 .image-bg {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   left: 0;
@@ -71,8 +73,6 @@ html {
   background: url("/static/images/poetry_display_interface/displayBackground1.svg") no-repeat center center;
   background-size: cover;
   z-index: -1;
-  border-bottom: 1px solid #FBF9EC;
-
 }
 
 
@@ -91,7 +91,6 @@ html {
 
 .material-card-content {
   display: flex;
-  flex-direction: row;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -211,6 +210,7 @@ html {
   background-color: #072A30;
   color: white;
   padding: 10px;
+  border-top: 2px solid #FBF9EC;
 }
 
 .footer .container-footer {
@@ -227,10 +227,12 @@ html {
   align-items: center;
   justify-content: center;
 }
+
 .feather-icon {
-  width: 20px; /* حجم الريشة */
+  width: 20px;
   margin-bottom: 2%;
 }
+
 .social-icons {
   display: flex;
   gap: 10px;
