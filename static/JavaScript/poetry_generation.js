@@ -26,7 +26,7 @@ buttons.forEach(button => {
 createButton.addEventListener('mouseenter', function (event) {
     // If no type is selected, the "انشئ قصيدتك" button will show an alert and will not be pressed.
     if (!isTypeSelected) {
-        alert("يرجى إختيار نوع قبل إنشاء القصيدة !!");
+        alert("يرجى إختيار النوع قبل إنشاء القصيدة !!");
         event.preventDefault();
     }
 });
