@@ -69,7 +69,7 @@ html {
   height: 100%; 
   left: 0;
   top: 0.5%;
-  background: url("/static/images/poetry_display_interface/displayBackground.svg") no-repeat center center;
+  background: url("/static/images/poetry_display_interface/B2.svg") no-repeat center center;
   background-size: cover;
   z-index: -1; 
   border-bottom: 1px solid #FBF9EC;
@@ -211,6 +211,8 @@ html {
   background-color: #072A30;
   color: white;
   padding: 10px;
+  margin-top: 0.2%;
+  border-top: 1px solid #FBF9EC
 }
 
 .footer .container-footer {
