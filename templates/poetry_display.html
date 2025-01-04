@@ -1,3 +1,4 @@
+<!-- poetry_display.html: لعرض الشعر المولد -->
 <!DOCTYPE html>
 <html lang="ar">
 
@@ -9,11 +10,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap" rel="stylesheet">
     <link href="{{ url_for('static', path='StyleSheets/Poetry_display.css') }}" rel="stylesheet">
-    <link href="/static/images/qafiah_logo.png" rel="icon" type="image/png">
-    <title>واجهة عرض القصيدة</title>
+    <link href="static\images\FavIcon.png" sizes="32x32" rel="icon" type="image/png">
+    <title>واجهة عرض القصيدة | قافية</title>
 </head>
 
-<body>
+<body class="image-bg">
     <!-- الهيدر -->
     <div class="header">
         <nav>
@@ -22,14 +23,14 @@
             <a href="#">نبذة عنا</a>
         </nav>
         <div class="logo">
-            <img src="\static\images\qafiah_logo.png" alt="logo"
-                width="70" height="65">
+            <a href="/">
+                <img src="\static\images\qafiah_logo.png" alt="logo" width="70" height="65">
+            </a>
         </div>
     </div>
 
     <div class="container">
-        <div class="image-bg"></div> <!-- صورة الخلفية -->
-
+        <div class="image-bg"></div>
         <div class="material-card">
             <div class="material-card-content">
                 <p>إن كان لي وطن، فوجهك وطني</p>
@@ -38,52 +39,43 @@
                 <p>وإن كان لي دار، فحبك داري</p>
             </div>
         </div>
-        <div> <button class="material-btn-last" onclick="showSpinner()">أعد إنشاء القصيدة</button></div>
-
-        <div class="overlay" id="overlay">
-            <div class="loader"></div>
-        </div>
+        <button class="material-btn-last" onclick="showSpinner()">أعد إنشاء القصيدة</button>
     </div>
-
-    <!-- <footer class="footer">
-        <div class="container">
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/WalaaAlluqmani" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:teamqafiah@gamil.com">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            <p class="footer-text">© فريق قافية 2024</p>
-        </div>
-    </footer> -->
 
     <!-- footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="container-footer">
             <div class="social-icons">
-                <a href="https://linktr.ee/yourusername" target="_blank">
+                <a href="https://linktr.ee/teamqafiah" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linktr.ee/teamqafiah" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="mailto:teamqafiah@gamil.com">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-            <p class="footer-text">© فريق قافية 2024</p>
+            <div class="footer-content">
+                <img src="static/images/feather.png" alt="Feather" class="feather-icon">
+                <p class="footer-text">جميع الحقوق محفوظة 2025 © قافية</p>
+            </div>
         </div>
     </footer>
 
     <!-- إضافة مكتبة JavaScript لمكتبة Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="static\JavaScript\script.js"></script>
 
 </body>
 
 
 
 </html>
-
+<!-- 
+        <div class="overlay" id="overlay">
+            <div class="loader"></div>
+        </div> -->
 <!-- الصورة والنص في المنتصف لعرض الشعر
             <div class="poem-container">
                 <div class="poem-image"></div>

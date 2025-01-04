@@ -1,1 +1,36 @@
 <!-- index.html: الواجهة الرئيسية -->
+<!DOCTYPE html>
+
+<!-- This defines the language of the page as Arabic (ar) -->
+<html lang="ar">
+
+<head>
+
+    <!-- Link to use the cards (material) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Link of the type of font used -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <!-- Link of the icons used in the footer -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- To link the CSS code to the interface -->
+    <link href="{{ url_for('static', path='StyleSheets/poetry_generation.css') }}" rel="stylesheet">
+    <!-- Fav Icon -->
+    <link href="static\images\FavIcon.png" sizes="32x32" rel="icon" type="image/png">
+    <!-- The page title -->
+    <title>الرئيسية | قافية</title>
+
+</head>
+
+
+<body>
+
+        <!-- button to go to the output interface to display the poem -->
+        <a href="/select-gener">
+            <button class="material-btn-last">إنشئ قصيدتك</button>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

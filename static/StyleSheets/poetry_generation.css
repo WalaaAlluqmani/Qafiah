@@ -13,11 +13,15 @@
     background-color: #ffffff;
     color: #072A30;
     border-bottom: 1px solid #072A30;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .header .logo {
     margin: 0;
-    padding: 0 10px;
+    padding: 0 20px;
     display: block;
 }
 
@@ -173,17 +177,31 @@ body {
     padding: 10px;
 }
 
-.footer .container {
+.footer .container-footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    justify-items: center;
     align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feather-icon {
+    width: 20px;
+    /* حجم الريشة */
+    margin-bottom: 2%;
 }
 
 .social-icons {
     display: flex;
     gap: 10px;
+    padding: 0 10px;
     justify-items: left;
 }
 
@@ -200,4 +218,13 @@ body {
 .footer-text {
     text-align: right;
     justify-content: right;
+    padding-right: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }

@@ -1,39 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
 * {
-    font-family: 'Amiri', serif;
+  font-family: 'Amiri', serif;
 }
 
-body, html {
-  height: 100%; /* تأكد من أن الجسم يمتد ليملأ الشاشة */
-  margin: 0; /* إزالة الهوامش الافتراضية */
-    font-family: 'Amiri', serif;
-
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* محاذاة المحتوى عموديًا في المنتصف */
-  align-items: center; /* محاذاة المحتوى أفقيًا في المنتصف */
-  height: 100%; /* تأكد من أن الحاوية تأخذ كل ارتفاع الصفحة */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Amiri', serif;
+  background-color: #FBF9EC;
 }
 
 
 .header {
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    background-color: #ffffff;
-    color: #072A30;
-    border-bottom: 1px solid #072A30;
-    position: fixed; /* يجعل الهيدر ثابتة */
-    top: 0; /* يضمن أن تكون في أعلى الصفحة */
-    left: 0; /* يضمن أن تكون في الزاوية اليسرى */
-    right: 0; /* يضمن أن تمتد عبر الصفحة */
-    z-index: 1000; /* يجعلها فوق العناصر الأخرى */
-
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #ffffff;
+  color: #072A30;
+  border-bottom: 1px solid #072A30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .header .logo {
@@ -63,43 +55,52 @@ body, html {
   color: #7A303F;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+}
 
-/* الصورة الخلفية */
 .image-bg {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100%; 
   left: 0;
-  top: 0%;
-    background: url("/static/images/poetry_display_interface/displayBackground.svg") no-repeat center center;
+  top: 0.5%;
+  background: url("/static/images/poetry_display_interface/B2.svg") no-repeat center center;
   background-size: cover;
-  z-index: -1;
+  z-index: -1; 
+  border-bottom: 1px solid #FBF9EC;
 }
 
 .material-card {
-  width: 45%; /* يجعل عرض البطاقة يعتمد على المحتوى */
-  max-width: 90%; /* عرض أقصى لتجنب تجاوز الشاشة */
-  padding: 20px; /* زيادة الحشو لجعل النص يظهر بشكل جيد */
-  border: 1px solid #AEA38A;
-  border-radius: 10px;
-  background-color: #ffffff;
-  text-align: center; /* محاذاة النص في المنتصف */
-  margin-top: 12%;
-  margin-bottom: 4%;
-  box-shadow: 0 0 20px rgba(19, 19, 19, 0.4);
+  width: 50%; 
+  height: 50%; 
+  background-color: transparent;
+  background-image: url("/static/images/poetry_display_interface/poem_background.png");
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 8%;
+  margin-bottom: 2%;
+  display: inline-block; 
 }
 
 .material-card-content {
   display: flex;
-  flex-direction: row;
-  flex-direction: column; /* ترتيب المحتويات عموديًا */
-  align-items: center; /* محاذاة المحتويات في المنتصف */
-  justify-content: center; /* محاذاة المحتويات في المنتصف */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: 'Amiri', serif;
+  margin-top: 9%;
 }
+
 .material-btn-last {
   border: 2px solid #7A303F;
-  padding: 10px 20px; /* تعديل الحشو ليكون أقل */
+  padding: 10px 20px;
   border-radius: 50px;
   font-size: 20px;
   cursor: pointer;
@@ -108,7 +109,7 @@ body, html {
   font-family: 'Amiri', serif;
   background-color: #7A303FFA;
   color: white;
-  transition: background-color 0.3s, color 0.3s; /* إضافة تأثير انتقال */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .material-btn-last:hover {
@@ -119,18 +120,19 @@ body, html {
 
 
 .material-btn-last:active {
-  background-color: rgba(121, 69, 79, 0.8); /* اللون عند الضغط، مع تقليل الشفافية */
+  background-color: rgba(121, 69, 79, 0.8);
   color: white;
-  box-shadow: 0 0 15px rgba(122, 48, 63, 0.6), 0 0 25px rgba(122, 48, 63, 0.3); /* ظل أخف */
+  box-shadow: 0 0 15px rgba(122, 48, 63, 0.6), 0 0 25px rgba(122, 48, 63, 0.3);
 }
+
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Black with transparency */
-  display: none; /* Hidden by default */
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -144,7 +146,7 @@ body, html {
   border-radius: 50%;
   color: #fff;
   background: currentColor;
-  box-shadow: 32px 0 , -32px 0 ,  64px 0;
+  box-shadow: 32px 0, -32px 0, 64px 0;
 }
 
 .loader::after {
@@ -155,37 +157,50 @@ body, html {
   width: 16px;
   height: 16px;
   border-radius: 10px;
-  background:#7A303F;
+  background: #7A303F;
   animation: move 3s linear infinite alternate;
 }
 
 @keyframes move {
-  0% , 5%{
+
+  0%,
+  5% {
     left: -32px;
     width: 16px;
   }
-  15% , 20%{
+
+  15%,
+  20% {
     left: -32px;
     width: 48px;
   }
-  30% , 35%{
+
+  30%,
+  35% {
     left: 0px;
     width: 16px;
   }
-  45% , 50%{
+
+  45%,
+  50% {
     left: 0px;
     width: 48px;
   }
-  60% , 65%{
+
+  60%,
+  65% {
     left: 32px;
     width: 16px;
   }
 
-  75% , 80% {
+  75%,
+  80% {
     left: 32px;
     width: 48px;
   }
-  95%, 100% {
+
+  95%,
+  100% {
     left: 64px;
     width: 16px;
   }
@@ -196,19 +211,34 @@ body, html {
   background-color: #072A30;
   color: white;
   padding: 10px;
+  margin-top: 0.2%;
+  border-top: 1px solid #FBF9EC
 }
 
-.footer .container {
+.footer .container-footer {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex; /* استخدام flexbox لجعل العناصر في سطر واحد */
-  justify-content: space-between; /* توزيع العناصر بحيث يكون كل منها في أقصى طرف */
-  align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feather-icon {
+  width: 20px; 
+  margin-bottom: 2%;
 }
 
 .social-icons {
-  display: flex; /* استخدام flexbox لرصف الأيقونات */
-  gap: 10px; /* إضافة مسافة بين الأيقونات */
+  display: flex;
+  gap: 10px;
+  padding: 0 10px;
   justify-items: left;
 }
 
@@ -223,8 +253,9 @@ body, html {
 }
 
 .footer-text {
-  text-align: right; /* محاذاة النص إلى اليمين */
+  text-align: right;
   justify-content: right;
+  padding-right: 0;
 }
 
 

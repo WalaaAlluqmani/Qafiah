@@ -9,11 +9,13 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
-    return templates.TemplateResponse("poetry_generation_poet.html", {"request": request})
+    return templates.TemplateResponse("poetry_generation.html", {"request": request})
 
-@app.get("/select", response_class=HTMLResponse)
-async def select(request: Request):
+
+@app.get("/generate-poetry", response_class=HTMLResponse)
+async def generate_poetry(request: Request):
     return templates.TemplateResponse("poetry_display.html", {"request": request})
+
 
 
 # @app.get("/create-poem", response_class=HTMLResponse)
