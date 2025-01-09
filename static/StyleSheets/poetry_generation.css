@@ -173,7 +173,15 @@ body {
     color: white;
 }
 
-.material-btn-last:disabled {
+.disabled:hover {
+    background-color: rgb(216, 214, 214);
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+    border: 2px solid rgb(144, 144, 144);
+}
+
+.disabled {
     background-color: rgb(216, 214, 214);
     color: #666;
     cursor: not-allowed;

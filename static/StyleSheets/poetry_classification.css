@@ -137,22 +137,12 @@ body {
     margin-right: auto;
     margin-top: 50px;
     font-family: 'Amiri', serif;
-    
 }
 
 .material-btn-last:hover {
     background-color: #7A303F;
     color: white;
 }
-
-/* .material-btn-last:disabled {
-    background-color: rgb(216, 214, 214);
-    color: #666;
-    cursor: not-allowed;
-    box-shadow: none;
-    border: 2px solid rgb(144, 144, 144);
-} */
-
 
 .disabled:hover {
     background-color: rgb(216, 214, 214);
