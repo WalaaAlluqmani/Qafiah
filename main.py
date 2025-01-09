@@ -28,20 +28,3 @@ async def generate_poetry(request: Request):
 async def generate_poetry(request: Request):
     return templates.TemplateResponse("poetry_display.html", {"request": request})
 
-
-
-# @app.get("/create-poem", response_class=HTMLResponse)
-# async def create_poem(request: Request):
-#     return templates.TemplateResponse("create_poem.html", {"request": request})
-
-# @app.get("/select-type", response_class=HTMLResponse)
-# async def select_type(request: Request):
-#     return templates.TemplateResponse("select_type.html", {"request": request})
-
-# @app.post("/result", response_class=HTMLResponse)
-# async def generate_poem(request: Request, prompt: str = Form(...)):
-#     # هنا يمكنك إضافة منطق إنشاء الشعر باستخدام النموذج
-#     generated_poem = f"قصيدة تم إنشاؤها حول: {prompt}"  # مثال بسيط
-#     return templates.TemplateResponse("result.html", {"request": request, "generated_poem": generated_poem})
-
-

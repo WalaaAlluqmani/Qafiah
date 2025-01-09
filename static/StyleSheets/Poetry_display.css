@@ -12,6 +12,18 @@ html {
   background-color: #F4EDDB;
 }
 
+/* تخصيص شريط التمرير في Chrome وSafari */
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+/* تخصيص شريط التمرير في Firefox */
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: #072A30 #d3d2d0c1; 
+}
+
+
 
 .header {
   display: flex;
