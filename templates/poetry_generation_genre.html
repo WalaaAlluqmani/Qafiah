@@ -1,4 +1,3 @@
-<!-- index.html: الواجهة الرئيسية -->
 <!DOCTYPE html>
 
 <!-- This defines the language of the page as Arabic (ar) -->
@@ -17,17 +16,101 @@
     <!-- Fav Icon -->
     <link href="static\images\FavIcon.png" sizes="32x32" rel="icon" type="image/png">
     <!-- The page title -->
-    <title>الرئيسية | قافية</title>
+    <title>واجهة إختيار نوع الشعر | قافية</title>
 
 </head>
 
 
 <body>
 
+    <!-- header -->
+    <div class="header">
+        <!-- navigation bar -->
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">أنشئ قصيدتك</a>
+            <a href="#">نبذة عنا</a>
+        </nav>
+        <div class="logo">
+            <a href="/">
+                <img src="\static\images\qafiah_logo.png" alt="logo" width="70" height="65">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- cards of the poets -->
+    <div class="container">
+
+        <div class="material-title">إختر نوع الشعر</div>
+
+        <div class="row">
+
+            <div class="col s12 m4">
+                <div class="material-card">
+                    <div class="material-card-content">
+                        <img src="static/images/poetry_generation_interface/Genre.png" alt="صورة الشاعر ابو العلاء"
+                        width="209" height="292">
+                        <p>يختصّ بمعاني الذم والقدح والتجريح التي تُستخدم للنيل من الآخرين وتشويه صورتهم أو صورة قبيلتهم بين الناس</p>
+                        <button class="material-btn">هجاء</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="material-card">
+                    <div class="material-card-content">
+                        <img src="static/images/poetry_generation_interface/Genre.png" alt="صورة الشاعر ابن نباته"
+                            width="209" height="292">
+                        <p>غرض من أغراض الشعر العربي عُرف منذ العصر الجاهلي ، وهو تعداد وذكر لمناقب الميت ومدح له بعد موته</p>
+                        <button class="material-btn">رثاء</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="material-card">
+                    <div class="material-card-content">
+                        <img src="static/images/poetry_generation_interface/Genre.png" alt="صورة الشاعر ابن الرومي"
+                        width="209" height="292">
+                        <p>غرض من أغراض الشعر العربي ، يقوم على الثناء وذكر محاسن الممدوح الانسان الحي ومناقبه في الدنيا واشاعة محامده وخصاله الطيبة بين الناس</p>
+                        <button class="material-btn">مدح</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <!-- button to go to the output interface to display the poem -->
-       
-        <p>hii</p>
-    
+        <a href="/generate-poetry">
+            <button class="material-btn-last">إنشئ قصيدتك</button>
+        </a>
+
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="social-icons">
+                <a href="https://linktr.ee/teamqafiah" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linktr.ee/teamqafiah" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:teamqafiah@gamil.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="footer-content">
+                <img src="static/images/feather.png" alt="Feather" class="feather-icon">
+                <p class="footer-text">جميع الحقوق محفوظة 2025 © قافية</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- To link the JS code to the interface -->
+    <script src="static/JavaScript/poetry_generation.js"></script>
 
 </body>
 
