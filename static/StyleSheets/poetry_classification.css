@@ -102,11 +102,16 @@ body {
     border-radius: 10px;
     background-color: #ffffff;
 
-    margin: 20px; /* زيادة المسافة حول المربع */
-    padding: 30px; /* توسيع الحواف الداخلية */
-    width: 90%; /* اجعل المربع أعرض */
-    max-width: 600px; /* حد أقصى للعرض */
-    min-height: 200px; /* اجعل المربع أطول */
+    margin: 20px;
+    /* زيادة المسافة حول المربع */
+    padding: 30px;
+    /* توسيع الحواف الداخلية */
+    width: 90%;
+    /* اجعل المربع أعرض */
+    max-width: 600px;
+    /* حد أقصى للعرض */
+    min-height: 200px;
+    /* اجعل المربع أطول */
 
     position: relative;
     text-align: center;
@@ -212,4 +217,3 @@ body {
     justify-content: right;
     padding-right: 0;
 }
-
