@@ -53,7 +53,7 @@ buttons.forEach(button => {
         this.classList.add('selected');
         // Activate the "انشئ قصيدتك" button
         isTypeSelected = true;
-        // createButton.disabled = false;
+        createButton.disabled = false;
     });
 });
 
