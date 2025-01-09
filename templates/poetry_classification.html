@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<!-- This defines the language of the page as Arabic (ar) -->
+<html lang="ar">
+
+<head>
+
+    <!-- Link to use the cards (material) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Link of the type of font used -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <!-- Link of the icons used in the footer -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- To link the CSS code to the interface -->
+    <link href="{{ url_for('static', path='StyleSheets/poetry_classification.css') }}" rel="stylesheet">
+    <!-- Fav Icon -->
+    <link href="static\images\FavIcon.png" sizes="32x32" rel="icon" type="image/png">
+    <!-- The page title -->
+    <title>واجهة تصنيف الشعر | قافية</title>
+
+</head>
+
+
+<body>
+
+    <!-- header -->
+    <div class="header">
+        <!-- navigation bar -->
+        <nav>
+            <a href="/">الرئيسية</a>
+            <a href="/">أنشئ قصيدتك</a>
+            <a href="#">صنف قصيدتك</a>
+            <a href="/">نبذة عنا</a>
+        </nav>
+        <div class="logo">
+            <a href="/">
+                <img src="\static\images\qafiah_logo.png" alt="logo" width="70" height="65">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- cards of the poets -->
+    <div class="container">
+
+        <div class="material-title">اكتب قصيدتك لمعرفة نوعها</div>
+
+            <div class="material-card">
+
+                <div class="material-card-content">
+
+                    <textarea class="text-field" placeholder="... اكتب قصيدتك هنا"></textarea>
+
+                    <button class="material-btn-last">صنف القصيدة</button>
+
+                </div>
+
+            </div>
+     
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="social-icons">
+                <a href="https://linktr.ee/teamqafiah" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:teamqafiah@gamil.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="footer-content">
+                <img src="static/images/feather.png" alt="Feather" class="feather-icon">
+                <p class="footer-text">جميع الحقوق محفوظة 2025 © قافية</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- To link the JS code to the interface -->
+    <!-- <script src="static/JavaScript/poetry_generation.js"></script> -->
+
+</body>
+
+</html>

@@ -23,6 +23,10 @@ async def generate_poetry(request: Request):
     return templates.TemplateResponse("poetry_generation_poets.html", {"request": request})
 
 
+@app.get("/select-classification", response_class=HTMLResponse)
+async def generate_poetry(request: Request):
+    return templates.TemplateResponse("poetry_classification.html", {"request": request})
+
 
 @app.get("/generate-poetry", response_class=HTMLResponse)
 async def generate_poetry(request: Request):
