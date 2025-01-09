@@ -1,4 +1,4 @@
-// لعرض السبانر بعد الضغط على زر الانشاء
+// To display the spanner after pressing the create button
 function showSpinner() {
     document.getElementById('overlay').style.display = 'flex';
     // Simulate loading for 3 seconds

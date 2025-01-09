@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // An input event listener
     textField.addEventListener("input", function () {
-        if (textField.value.trim() !== "") { 
+        if (textField.value.trim() !== "") {
             // Remove class when there is a text in the field
             classifyButton.classList.remove("disabled");
         } else {
