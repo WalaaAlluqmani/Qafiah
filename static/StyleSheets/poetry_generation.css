@@ -52,6 +52,18 @@ body {
     background-color: #FBF9EC;
 }
 
+/* -------------------------- scrollbar -------------------------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #072A30 #f4eddb00;
+}
+
+
+
 /* -------------------------- material title -------------------------- */
 
 .material-title {
