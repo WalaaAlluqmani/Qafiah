@@ -34,3 +34,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function showSpinner() {
+    // Display the overlay with a spinner
+    document.getElementById('overlay').style.display = 'flex'; 
+}
+
+// This function sets the selected genre and assigns it to a hidden variable
+function setGenre(genre) {
+    document.getElementById('selected-genre').value = genre; 
+}
+
+// This function sets the selected poet and assigns it to a hidden variable
+function setPoet(poet) {
+    document.getElementById('selected-poet').value = poet; 
+}

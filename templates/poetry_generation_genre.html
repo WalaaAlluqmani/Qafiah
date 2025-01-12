@@ -23,6 +23,14 @@
 
 <body>
 
+    <!-- loading spinner -->
+    <div class="overlay" id="overlay">
+        <div class="spinner"></div>
+        <div class="loading-text">
+            ... جاري إنشاء القصيدة
+        </div> <!-- نص التحميل -->
+    </div>
+
     <!-- header -->
     <div class="header">
         <!-- navigation bar -->
@@ -54,7 +62,7 @@
                             width="209" height="292">
                         <p>يختصّ بمعاني الذم والقدح والتجريح التي تُستخدم للنيل من الآخرين وتشويه صورتهم أو صورة قبيلتهم
                             بين الناس</p>
-                        <button class="material-btn">هجاء</button>
+                        <button class="material-btn" onclick="setGenre('هجاء')">هجاء</button>
                     </div>
                 </div>
             </div>
@@ -66,7 +74,7 @@
                             width="209" height="292">
                         <p>غرض من أغراض الشعر العربي عُرف منذ العصر الجاهلي ، وهو تعداد وذكر لمناقب الميت ومدح له بعد
                             موته</p>
-                        <button class="material-btn">رثاء</button>
+                        <button class="material-btn" onclick="setGenre('رثاء')">رثاء</button>
                     </div>
                 </div>
             </div>
@@ -78,7 +86,7 @@
                             width="209" height="292">
                         <p>غرض من أغراض الشعر العربي ، يقوم على الثناء وذكر محاسن الممدوح الانسان الحي ومناقبه في الدنيا
                             واشاعة محامده وخصاله الطيبة بين الناس</p>
-                        <button class="material-btn">مدح</button>
+                        <button class="material-btn" onclick="setGenre('مدح')">مدح</button>
                     </div>
                 </div>
             </div>
@@ -86,9 +94,12 @@
         </div>
 
         <!-- button to go to the output interface to display the poem -->
-        <!-- <a href="/generate-poetry"> -->
-        <button class="material-btn-last">إنشئ قصيدتك</button>
-        <!-- </a> -->
+        <form action="/generate-poetry" method="post" onsubmit="showSpinner()">
+            <input type="hidden" name="genre" id="selected-genre" value="">
+            <button type="submit" class="material-btn-last">إنشئ قصيدتك</button>
+        </form>
+       
+      
 
     </div>
 
