@@ -40,12 +40,7 @@ function showSpinner() {
     document.getElementById('overlay').style.display = 'flex'; 
 }
 
-// This function sets the selected genre and assigns it to a hidden variable
-function setGenre(genre) {
-    document.getElementById('selected-genre').value = genre; 
-}
-
-// This function sets the selected poet and assigns it to a hidden variable
-function setPoet(poet) {
-    document.getElementById('selected-poet').value = poet; 
+// This function sets the selected genre or poet and assigns it to a hidden variable
+function setType(type) {
+    document.getElementById('selected-genre').value = type; 
 }

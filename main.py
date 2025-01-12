@@ -29,6 +29,7 @@ async def generate_poetry(request: Request):
 
 
 @app.post("/generate-poetry", response_class=HTMLResponse)
-async def generate_poetry(request: Request, genre: str = Form(...)):
-    return templates.TemplateResponse("poetry_display.html", {"request": request})
+async def generate_poetry(request: Request, type: str = Form(...)):
+    type='g'
+    return templates.TemplateResponse("poetry_display.html", {"request": request, "type": type})
 
