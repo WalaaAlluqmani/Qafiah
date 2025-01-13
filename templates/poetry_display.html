@@ -12,10 +12,12 @@
     <link href="{{ url_for('static', path='StyleSheets/Poetry_display.css') }}" rel="stylesheet">
     <link href="static\images\FavIcon.png" sizes="32x32" rel="icon" type="image/png">
     <title>واجهة عرض القصيدة | قافية</title>
+
+  
 </head>
 
 <body class="image-bg">
-
+   
     <div class="overlay" id="overlay">
         <div class="spinner"></div>
         <div class="loading-text">
@@ -33,7 +35,7 @@
         </nav>
         <div class="logo">
             <a href="/">
-                <img src="\static\images\qafiah_logo.png" alt="logo" width="70" height="65">
+                <img src="/static/images/qafiah_logo.png" alt="logo" width="70" height="65">
             </a>
         </div>
     </div>
@@ -50,6 +52,7 @@
         </div>
         <button class="material-btn-last" onclick="showSpinner()">أعد إنشاء القصيدة</button>
     </div>
+    
 
     <!-- footer -->
     <footer class="footer">
@@ -68,52 +71,12 @@
             </div>
         </div>
     </footer>
-
-    <!-- إضافة مكتبة JavaScript لمكتبة Materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="static\JavaScript\poetry_display.js"></script>
-
+    
+      <!-- إضافة مكتبة JavaScript لمكتبة Materialize -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="static/JavaScript/poetry_display.js"></script>
+  
 </body>
 
-
-
 </html>
-<!-- 
-        <div class="overlay" id="overlay">
-            <div class="loader"></div>
-        </div> -->
-<!-- الصورة والنص في المنتصف لعرض الشعر
-            <div class="poem-container">
-                <div class="poem-image"></div>
-                <div class="overlay-text">
-                    <p>إن كان لي وطن، فوجهك وطني</p>
-                    <p>وإن كان لي دار، فحبك داري</p>
-                </div>
-            </div> -->
-
-
-
-<!-- <div class="col s12 m4">
-                    <div class="main-image">
-                        <img src="C:\Users\wloow\Dropbox\PC\Desktop\Qafiah System\Qafiah\assets\images\bigTree.png"
-                            alt="Palm Tree"> 
-                    </div>
-                    <div class="small-image">
-                        <img src="C:\Users\wloow\Dropbox\PC\Desktop\Qafiah System\Qafiah\assets\images\smallTree.png"
-                            alt="Palm Tree"> 
-                    </div>
-                </div>  -->
-
-
-<!-- <div class="col s12 m4">
-
-                    <div class="stand-image">
-                        <img src="C:/Users/wloow/Dropbox/PC/Desktop/Qafiah System/Qafiah/assets/images/stand_display.png"
-                            alt="Stand Image" />
-                    </div>
-
-                    <div class="Vase-image">
-                        <img src="C:/Users/wloow/Dropbox/PC/Desktop/Qafiah System/Qafiah/assets/images/fazah_display.png"
-                            alt="Vase Image" />
-                    </div>
-                </div> -->
