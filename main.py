@@ -59,7 +59,8 @@ async def classify(request: Request):
         outputs = classification_model(**inputs)
     
     predicted_class = torch.argmax(outputs.logits, dim=1).item()
-    class_labels = ["رثاء", "مدح", "هجاء"]  
+    class_labels = ["هجاء", "مدح", "رثاء"]
+    # class_labels = ["رثاء", "مدح", "هجاء"]  
     result = class_labels[predicted_class]
 
     return JSONResponse(content={"result": result})
