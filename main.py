@@ -22,6 +22,7 @@ classification_model = AutoModelForSequenceClassification.from_pretrained(classi
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
+
 @app.get("/select-genre", response_class=HTMLResponse)
 async def generate_poetry(request: Request):
     return templates.TemplateResponse("poetry_generation_genre.html", {"request": request})
@@ -30,6 +31,7 @@ async def generate_poetry(request: Request):
 @app.get("/select-poet", response_class=HTMLResponse)
 async def generate_poetry(request: Request):
     return templates.TemplateResponse("poetry_generation_poets.html", {"request": request})
+
 
 @app.post("/generate-poetry", response_class=HTMLResponse)
 async def generate_poetry(request: Request, type: str = Form(...)):
@@ -40,6 +42,7 @@ async def generate_poetry(request: Request, type: str = Form(...)):
 @app.get("/classify_poetry", response_class=HTMLResponse)
 async def generate_poetry(request: Request):
     return templates.TemplateResponse("poetry_classification.html", {"request": request})
+
 
 @app.post("/classification_poetry", response_class=HTMLResponse)
 async def classify(request: Request):
