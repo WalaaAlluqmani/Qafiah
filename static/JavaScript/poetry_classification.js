@@ -26,3 +26,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+// function submitPoem() {
+//     const poem = document.getElementById('poem').value;
+
+//     fetch('/classification_poetry', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({ poem: poem }), // تحويل البيانات إلى JSON
+//     })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Network response was not ok');
+//             }
+//             return response.json(); // تحويل الاستجابة إلى JSON
+//         })
+//         .then(data => {
+//             document.getElementById('result').innerText = "نوع القصيدة: " + data.result;
+//         })
+//         .catch(error => {
+//             console.error('Error:', error);
+//             document.getElementById('result').innerText = 'حدث خطأ أثناء تصنيف القصيدة.';
+//         });
+// }
