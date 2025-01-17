@@ -12,7 +12,7 @@ templates = Jinja2Templates(directory="templates")
 
 # --------------------------------models----------------------------------------------
 
-classification_model_path = "models/50e" # نموذج 1
+classification_model_path = "models/classifymodel" # نموذج 1
 classification_tokenizer = AutoTokenizer.from_pretrained(classification_model_path)
 classification_model = AutoModelForSequenceClassification.from_pretrained(classification_model_path)
 
@@ -60,7 +60,6 @@ async def classify(request: Request):
     
     predicted_class = torch.argmax(outputs.logits, dim=1).item()
     class_labels = ["هجاء", "مدح", "رثاء"]
-    # class_labels = ["رثاء", "مدح", "هجاء"]  
     result = class_labels[predicted_class]
 
     return JSONResponse(content={"result": result})
