@@ -46,20 +46,27 @@ async def generate_poetry(request: Request):
 
 @app.post("/classification_poetry", response_class=HTMLResponse)
 async def classify(request: Request):
-   
-    data = await request.json()
-    text = data.get("poem") 
+    try:
+        data = await request.json()
+        text = data.get("poem")
 
-    if not text:
-        return JSONResponse(content={"error": "Missing poem field"}, status_code=422)
+        # التحقق من وجود نص وإمكانية تصنيفه
+        if not text or len(text.strip()) < 4:  # يجب أن يكون النص مكونًا من 10 أحرف على الأقل
+            return JSONResponse(content={"error": "الرجاء إدخال قصيدة أو شطرًا يحتوي على 4 أحرف على الأقل."}, status_code=422)
 
-    inputs = classification_tokenizer(text, return_tensors="pt", truncation=True, padding=True)
-    
-    with torch.no_grad():
-        outputs = classification_model(**inputs)
-    
-    predicted_class = torch.argmax(outputs.logits, dim=1).item()
-    class_labels = ["هجاء", "مدح", "رثاء"]
-    result = class_labels[predicted_class]
+        # معالجة الإدخال وتحويله إلى تنسيق النموذج
+        inputs = classification_tokenizer(text, return_tensors="pt", truncation=True, padding=True)
 
-    return JSONResponse(content={"result": result})
+        # إجراء التصنيف
+        with torch.no_grad():
+            outputs = classification_model(**inputs)
+
+        predicted_class = torch.argmax(outputs.logits, dim=1).item()
+        class_labels = ["هجاء", "مدح", "رثاء"]
+        result = class_labels[predicted_class]
+
+        return JSONResponse(content={"result": result})
+
+    except Exception as e:
+        # إدارة الأخطاء العامة
+        return JSONResponse(content={"error": "حدث خطأ أثناء معالجة الطلب: " + str(e)}, status_code=500)

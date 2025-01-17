@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (textField.value.trim() !== "") {
             // Remove class when there is a text in the field
             classifyButton.classList.remove("disabled");
+            
         } else {
             // Add class when field is empty
             classifyButton.classList.add("disabled");
