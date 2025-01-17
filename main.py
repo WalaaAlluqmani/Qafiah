@@ -50,14 +50,14 @@ async def classify(request: Request):
         data = await request.json()
         text = data.get("poem")
 
-        # التحقق من وجود نص وإمكانية تصنيفه
-        if not text or len(text.strip()) < 4:  # يجب أن يكون النص مكونًا من 10 أحرف على الأقل
+      
+        if not text or len(text.strip()) < 4:  
             return JSONResponse(content={"error": "الرجاء إدخال قصيدة أو شطرًا يحتوي على 4 أحرف على الأقل."}, status_code=422)
 
-        # معالجة الإدخال وتحويله إلى تنسيق النموذج
+     
         inputs = classification_tokenizer(text, return_tensors="pt", truncation=True, padding=True)
 
-        # إجراء التصنيف
+      
         with torch.no_grad():
             outputs = classification_model(**inputs)
 
@@ -68,5 +68,4 @@ async def classify(request: Request):
         return JSONResponse(content={"result": result})
 
     except Exception as e:
-        # إدارة الأخطاء العامة
         return JSONResponse(content={"error": "حدث خطأ أثناء معالجة الطلب: " + str(e)}, status_code=500)

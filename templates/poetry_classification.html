@@ -80,7 +80,7 @@
             const poem = document.getElementById('poem').value;
 
             // تغيير النص إلى "يتم التصنيف..." لإظهار أن العملية قيد التنفيذ
-            document.getElementById('result').innerText = "يتم التصنيف...";
+            document.getElementById('result').innerText = "جاري التصنيف...";
 
             fetch('/classification_poetry', {
                 method: 'POST',
