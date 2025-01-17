@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const createButton = document.querySelector('.material-btn-last');
     const buttons = document.querySelectorAll('.material-btn');
@@ -8,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Variable to track selection status
     let isTypeSelected = false;
 
-    // An event when any button of the types is pressed
+    // // An event when any button of the types is pressed
     buttons.forEach(button => {
         button.addEventListener('click', function () {
             // Remove the "selected" class from all buttons
@@ -29,8 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("يرجى إختيار النوع قبل إنشاء القصيدة !!!");
             event.preventDefault();
         } else {
-            // Go to the output page
+            showSpinner(); // استدعاء دالة السبينر هنا
+        // Go to the output page after a short delay to show the spinner
+        setTimeout(() => {
             window.location.href = "/generate-poetry";
+        }, 1000); // تأخير لمدة 1 ثانية
+    
         }
     });
 });
+
+function showSpinner() {
+    console.log("Spinner is shown");
+    // Display the overlay with a spinner
+    document.getElementById('overlay').style.display = 'flex'; 
+}
+

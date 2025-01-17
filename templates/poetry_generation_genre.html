@@ -23,6 +23,14 @@
 
 <body>
 
+    <!-- loading spinner -->
+    <div class="overlay" id="overlay">
+        <div class="spinner"></div>
+        <div class="loading-text">
+            ... جاري إنشاء القصيدة
+        </div> <!-- نص التحميل -->
+    </div>
+
     <!-- header -->
     <div class="header">
         <!-- navigation bar -->
@@ -54,7 +62,7 @@
                             width="209" height="292">
                         <p>يختصّ بمعاني الذم والقدح والتجريح التي تُستخدم للنيل من الآخرين وتشويه صورتهم أو صورة قبيلتهم
                             بين الناس</p>
-                        <button class="material-btn">هجاء</button>
+                        <button class="material-btn" >هجاء</button>
                     </div>
                 </div>
             </div>
@@ -86,9 +94,12 @@
         </div>
 
         <!-- button to go to the output interface to display the poem -->
-        <!-- <a href="/generate-poetry"> -->
-        <button class="material-btn-last">إنشئ قصيدتك</button>
-        <!-- </a> -->
+        <form action="/generate-poetry" method="post" onsubmit="showSpinner()">
+            <input type="hidden" name="type" id="selected-type" value="">
+            <button type="submit" class="material-btn-last">إنشئ قصيدتك</button>
+        </form>
+       
+      
 
     </div>
 

@@ -37,7 +37,7 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 900;
 }
 
 .header .logo {
@@ -136,88 +136,6 @@ html {
   box-shadow: 0 0 15px rgba(122, 48, 63, 0.6), 0 0 25px rgba(122, 48, 63, 0.3);
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.loader {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: -32px;
-  border-radius: 50%;
-  color: #fff;
-  background: currentColor;
-  box-shadow: 32px 0, -32px 0, 64px 0;
-}
-
-.loader::after {
-  content: '';
-  position: absolute;
-  left: -32px;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 10px;
-  background: #7A303F;
-  animation: move 3s linear infinite alternate;
-}
-
-@keyframes move {
-
-  0%,
-  5% {
-    left: -32px;
-    width: 16px;
-  }
-
-  15%,
-  20% {
-    left: -32px;
-    width: 48px;
-  }
-
-  30%,
-  35% {
-    left: 0px;
-    width: 16px;
-  }
-
-  45%,
-  50% {
-    left: 0px;
-    width: 48px;
-  }
-
-  60%,
-  65% {
-    left: 32px;
-    width: 16px;
-  }
-
-  75%,
-  80% {
-    left: 32px;
-    width: 48px;
-  }
-
-  95%,
-  100% {
-    left: 64px;
-    width: 16px;
-  }
-
-}
-
 .footer {
   background-color: #072A30;
   color: white;
@@ -270,80 +188,60 @@ html {
 }
 
 
-/* 
- .overlay-text {
-  
-  position: absolute;
-  
-  top: 50%;
-  
-  left: 50%;
- 
-  transform: translate(-50%, -50%);
- 
-  color: rgb(0, 0, 0);
- 
-  text-align: center;
- 
-  font-size: 24px;
-  font-family: 'Amiri', serif;
-} 
-.poem-image {
-  background: url("C:/Users/wloow/Dropbox/PC/Desktop/Qafiah System/Qafiah/assets/images/poem_background.png") no-repeat center center;
+/* -------------------------- loading spinner -------------------------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.918); /* خلفية سوداء شفافة */
   background-size: cover;
-  width: 200px;
-  height: 500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  filter: drop-shadow(0px 4px 20px rgba(125, 121, 121, 0.6)); 
-}  */
-/*
-.stand-image,
-.Vase-image,
-.main-image,
-.small-image {
-  position: absolute;
-  z-index: 1;
+  z-index: 1000; /* التأكد من أن الخلفية تحت السبانر */
+  display: none; /* إخفاء السبانر افتراضيًا */
+  justify-content: center; /* توسيط العمود */
+  align-items: center; /* توسيط الصف */
+  flex-direction: column; /* تنظيم العناصر عمودياً */
+  size: 20%;
 }
 
-.stand-image {
-  left: 70px;
-  top: 70%;
-  transform: translateY(-55%) translateX(5.5%);
+.spinner {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  background-image: url('/static/images/spinner.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: move-and-scale 5s linear infinite; /* تأثير الحركة والتكبير */
+  z-index: 2; /* التأكد من أن السبانر فوق الخلفية */
 }
 
-.Vase-image {
-  left: 70px;
-  top: 80%;
-  transform: translateY(-35.5%) translateX(4%);
+.loading-text {
+  color: #072A30;/* لون النص */
+  margin-top: 15px; /* مسافة بين السبانر والنص */
+  font-size: 18px; /* حجم النص */
+  font-family: 'Amiri', serif;
+  white-space: nowrap; /* منع التفاف النص */
+  overflow: hidden; /* إخفاء النص الزائد */
+  position: relative; /* لجعل النقاط متعلقة بالنص */
 }
 
-.main-image {
-  top: 40%;
-  right: 10px;
-  transform: translateY(25%) translateX(42%);
+@keyframes move-and-scale {
+  0% {
+      transform: translate(20%) scale(0.9); /* بداية الحركة من اليمين بحجم طبيعي */
+  }
+  20% {
+      transform: translate(20%) scale(1.1); /* التكبير قليلاً أثناء الوصول للنقطة الوسطى */
+  }
+  40% {
+      transform: translate(20%) scale(0.9); /* العودة إلى الحجم الطبيعي */
+  }
+  60% {
+      transform: translate(20%) scale(1.2); /* التصغير قليلاً */
+  }
+  80% {
+    transform: translate(20%) scale(0.9);
+  }
+  100% {
+      transform: translate(20%) scale(1.1); /* العودة إلى اليمين بحجم طبيعي */
+  }
 }
-.small-image {
-  top: 60%;
-  right: 5px;
-  transform: translateY(27%) translateX(34%);
-}
-
-.main-image img {
-  width: 45%;
-  height: auto;
-}
-
-.small-image img {
-  width: 30%;
-  height: auto;
-}
-
-.stand-image img,
-.Vase-image img {
-  width: 20%;
-  height: auto;
-}
-*/
