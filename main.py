@@ -44,28 +44,28 @@ async def generate_poetry(request: Request):
     return templates.TemplateResponse("poetry_classification.html", {"request": request})
 
 
-@app.post("/classification_poetry", response_class=HTMLResponse)
-async def classify(request: Request):
-    try:
-        data = await request.json()
-        text = data.get("poem")
+# @app.post("/classification_poetry", response_class=HTMLResponse)
+# async def classify(request: Request):
+#     try:
+#         data = await request.json()
+#         text = data.get("poem")
 
       
-        if not text or len(text.strip()) < 4:  
-            return JSONResponse(content={"error": "الرجاء إدخال قصيدة أو شطرًا يحتوي على 4 أحرف على الأقل."}, status_code=422)
+#         if not text or len(text.strip()) < 4:  
+#             return JSONResponse(content={"error": "الرجاء إدخال قصيدة أو شطرًا يحتوي على 4 أحرف على الأقل."}, status_code=422)
 
      
-        inputs = classification_tokenizer(text, return_tensors="pt", truncation=True, padding=True)
+#         inputs = classification_tokenizer(text, return_tensors="pt", truncation=True, padding=True)
 
       
-        with torch.no_grad():
-            outputs = classification_model(**inputs)
+#         with torch.no_grad():
+#             outputs = classification_model(**inputs)
 
-        predicted_class = torch.argmax(outputs.logits, dim=1).item()
-        class_labels = ["هجاء", "مدح", "رثاء"]
-        result = class_labels[predicted_class]
+#         predicted_class = torch.argmax(outputs.logits, dim=1).item()
+#         class_labels = ["هجاء", "مدح", "رثاء"]
+#         result = class_labels[predicted_class]
 
-        return JSONResponse(content={"result": result})
+#         return JSONResponse(content={"result": result})
 
-    except Exception as e:
-        return JSONResponse(content={"error": "حدث خطأ أثناء معالجة الطلب: " + str(e)}, status_code=500)
+#     except Exception as e:
+#         return JSONResponse(content={"error": "حدث خطأ أثناء معالجة الطلب: " + str(e)}, status_code=500)
