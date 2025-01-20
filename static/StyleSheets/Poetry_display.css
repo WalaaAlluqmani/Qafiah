@@ -94,7 +94,8 @@ html {
   padding: 20px;
   border: 1px solid #AEA38A;
   border-radius: 10px;
-  background-color: #D4CCC1;
+  /* background-color: #D4CCC1; */
+  background-color: #eae6e0;
   text-align: center;
   justify-content: center;
   margin-top: 12%;
@@ -189,59 +190,111 @@ html {
 
 
 /* -------------------------- loading spinner -------------------------- */
+/* .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.918);
+  background-size: cover;
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  size: 20%;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  background-image: url('/static/images/spinner.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: move-and-scale 5s linear infinite;
+  z-index: 2;
+}
+
+.loading-text {
+  color: #072A30;
+  margin-top: 15px;
+  font-size: 18px;
+  font-family: 'Amiri', serif;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes move-and-scale {
+  0% {
+      transform: translate(20%) scale(0.9);
+  }
+  20% {
+      transform: translate(20%) scale(1.1);
+  }
+  40% {
+      transform: translate(20%) scale(0.9);
+  }
+  60% {
+      transform: translate(20%) scale(1.2);
+  }
+  80% {
+    transform: translate(20%) scale(0.9);
+  }
+  100% {
+      transform: translate(20%) scale(1.1);
+  }
+} */
+
+
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.918); /* خلفية سوداء شفافة */
+  background-color: rgba(255, 255, 255, 0.95); /* خلفية سوداء شفافة */
   background-size: cover;
-  z-index: 1000; /* التأكد من أن الخلفية تحت السبانر */
+  z-index: 1; /* التأكد من أن الخلفية تحت السبانر */
   display: none; /* إخفاء السبانر افتراضيًا */
   justify-content: center; /* توسيط العمود */
   align-items: center; /* توسيط الصف */
   flex-direction: column; /* تنظيم العناصر عمودياً */
-  size: 20%;
 }
-
 .spinner {
   width: 100px; /* Adjust size as needed */
   height: 100px; /* Adjust size as needed */
   background-image: url('/static/images/spinner.png');
   background-size: contain;
   background-repeat: no-repeat;
-  animation: move-and-scale 5s linear infinite; /* تأثير الحركة والتكبير */
+  animation: check-check 1.5s infinite; /* تأثير تشيك تشيك */
   z-index: 2; /* التأكد من أن السبانر فوق الخلفية */
 }
-
 .loading-text {
-  color: #072A30;/* لون النص */
+  color: rgb(40, 40, 40); /* لون النص */
   margin-top: 15px; /* مسافة بين السبانر والنص */
   font-size: 18px; /* حجم النص */
-  font-family: 'Amiri', serif;
   white-space: nowrap; /* منع التفاف النص */
   overflow: hidden; /* إخفاء النص الزائد */
   position: relative; /* لجعل النقاط متعلقة بالنص */
 }
 
-@keyframes move-and-scale {
-  0% {
-      transform: translate(20%) scale(0.9); /* بداية الحركة من اليمين بحجم طبيعي */
+@keyframes check-check {
+  0%, 100% {
+      transform: translate(0) scale(1); /* البداية والنهاية في المنتصف */
+      opacity: 1; /* رؤية كاملة */
   }
-  20% {
-      transform: translate(20%) scale(1.1); /* التكبير قليلاً أثناء الوصول للنقطة الوسطى */
+  25% {
+      transform: translate(20px) scale(1.1); /* الحركة لليمين مع تكبير طفيف */
+      opacity: 1; /* شفافية أقل */
   }
-  40% {
-      transform: translate(20%) scale(0.9); /* العودة إلى الحجم الطبيعي */
+  50% {
+      transform: translate(-20px) scale(1); /* الحركة لليسار مع العودة للحجم الأصلي */
+      opacity: 1; /* شفافية أقل */
   }
-  60% {
-      transform: translate(20%) scale(1.2); /* التصغير قليلاً */
-  }
-  80% {
-    transform: translate(20%) scale(0.9);
-  }
-  100% {
-      transform: translate(20%) scale(1.1); /* العودة إلى اليمين بحجم طبيعي */
+  75% {
+      transform: translate(20px) scale(1.1); /* الحركة لليمين مرة أخرى مع تكبير طفيف */
+      opacity: 0.8; /* شفافية أقل */
   }
 }

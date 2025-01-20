@@ -16,7 +16,7 @@
     <!-- Fav Icon -->
     <link href="static\images\FavIcon.png" sizes="32x32" rel="icon" type="image/png">
     <!-- The page title -->
-    <title>واجهة تصنيف الشعر | قافية</title>
+    <title>واجهة تصنيف القصائد | قافية</title>
 
 </head>
 
@@ -40,15 +40,17 @@
     </div>
 
 
-    <!-- cards of the poets -->
+
     <div class="container">
 
         <div class="material-title">اكتب قصيدتك لمعرفة نوعها</div>
 
         <div class="material-card">
-            <textarea class="text-field" placeholder="... اكتب قصيدتك هنا"></textarea>
-            <button class="material-btn-last" >صنف القصيدة</button>
+            <textarea id="poem" class="text-field" placeholder="... اكتب قصيدتك هنا"></textarea>
         </div>
+
+        <button class="material-btn-last" onclick="submitPoem()">صنف القصيدة</button>
+        <p id="result"></p>
 
     </div>
 
@@ -72,6 +74,37 @@
 
     <!-- To link the JS code to the interface -->
     <script src="static/JavaScript/poetry_classification.js"></script>
+    <script>
+
+        function submitPoem() {
+            const poem = document.getElementById('poem').value;
+
+            // تغيير النص إلى "يتم التصنيف..." لإظهار أن العملية قيد التنفيذ
+            document.getElementById('result').innerText = "جاري التصنيف...";
+
+            fetch('/classification_poetry', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ poem: poem }), // تحويل البيانات إلى JSON
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json(); // تحويل الاستجابة إلى JSON
+                })
+                .then(data => {
+                    // عرض النتيجة النهائية
+                    document.getElementById('result').innerText = "نوع القصيدة: " + data.result;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('result').innerText = 'حدث خطأ أثناء تصنيف القصيدة.';
+                });
+        }
+    </script>
 
 </body>
 
