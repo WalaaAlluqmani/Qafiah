@@ -12,9 +12,9 @@ templates = Jinja2Templates(directory="templates")
 
 # --------------------------------models----------------------------------------------
 
-classification_model_path = "models/classifymodel" # نموذج 1
-classification_tokenizer = AutoTokenizer.from_pretrained(classification_model_path)
-classification_model = AutoModelForSequenceClassification.from_pretrained(classification_model_path)
+# classification_model_path = "models/classifymodel" # نموذج 1
+# classification_tokenizer = AutoTokenizer.from_pretrained(classification_model_path)
+# classification_model = AutoModelForSequenceClassification.from_pretrained(classification_model_path)
 
 # --------------------------------pages-----------------------------------------------
 
