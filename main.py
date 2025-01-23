@@ -2,20 +2,21 @@ from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from transformers import  AutoTokenizer, AutoModelForSequenceClassification
-import torch
+from transformers import GPT2TokenizerFast, GPT2LMHeadModel, pipeline
 
 # ----------------------------------------------------------------------------------
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
-# --------------------------------models----------------------------------------------
+# --------------------------------AraGPT-2----------------------------------------------
 
-# classification_model_path = "models/classifymodel" # نموذج 1
-# classification_tokenizer = AutoTokenizer.from_pretrained(classification_model_path)
-# classification_model = AutoModelForSequenceClassification.from_pretrained(classification_model_path)
+# model_path = "AraGPT-mutnabi"
+# model = GPT2LMHeadModel.from_pretrained(model_path)
+# tokenizer = GPT2TokenizerFast.from_pretrained(model_path)
+# model.eval()
 
+# generation_pipeline = pipeline("text-generation", model=model, tokenizer=tokenizer)
 # --------------------------------pages-----------------------------------------------
 
 @app.get("/", response_class=HTMLResponse)
@@ -35,37 +36,29 @@ async def generate_poetry(request: Request):
 
 @app.post("/generate-poetry", response_class=HTMLResponse)
 async def generate_poetry(request: Request, type: str = Form(...)):
-    type='g'
-    return templates.TemplateResponse("poetry_display.html", {"request": request, "type": type})
+
+    # prompt=[]
+    # hidden_prompt=''
+    # input=prompt+hidden_prompt
+
+    # generated_poem = generation_pipeline(
+    #   prompt,
+    #   pad_token_id=tokenizer.eos_token_id,
+    #   num_beams=6,
+    #   max_length=50,
+    #   top_p=0.9,
+    #   temperature=0.9,
+    #   repetition_penalty = 3.0,
+    #   no_repeat_ngram_size = 3,
+    #   early_stopping=True,
+    #   truncation=True
+    # )[0]['generated_text']
+
+    # return templates.TemplateResponse("poetry_display.html", {"request": request, "generated_poem": generated_poem})
+    return templates.TemplateResponse("poetry_display.html", {"request": request})
 
 
 @app.get("/classify_poetry", response_class=HTMLResponse)
 async def generate_poetry(request: Request):
     return templates.TemplateResponse("poetry_classification.html", {"request": request})
 
-
-# @app.post("/classification_poetry", response_class=HTMLResponse)
-# async def classify(request: Request):
-#     try:
-#         data = await request.json()
-#         text = data.get("poem")
-
-      
-#         if not text or len(text.strip()) < 4:  
-#             return JSONResponse(content={"error": "الرجاء إدخال قصيدة أو شطرًا يحتوي على 4 أحرف على الأقل."}, status_code=422)
-
-     
-#         inputs = classification_tokenizer(text, return_tensors="pt", truncation=True, padding=True)
-
-      
-#         with torch.no_grad():
-#             outputs = classification_model(**inputs)
-
-#         predicted_class = torch.argmax(outputs.logits, dim=1).item()
-#         class_labels = ["هجاء", "مدح", "رثاء"]
-#         result = class_labels[predicted_class]
-
-#         return JSONResponse(content={"result": result})
-
-#     except Exception as e:
-#         return JSONResponse(content={"error": "حدث خطأ أثناء معالجة الطلب: " + str(e)}, status_code=500)
