@@ -86,11 +86,6 @@ body {
     border-radius: 10px;
     background-color: rgb(193, 190, 190);
 }
-/* 
-.material-card-soon:hover {
-    transform: scale(1.07);
-    transition: transform 0.3s ease;
-} */
 
 .material-card {
     margin: 10px;
@@ -131,13 +126,11 @@ body {
 
 .material-btn-soon {
     margin: 10px;
-
     background-color: rgb(216, 214, 214);
     color: #666;
     cursor: not-allowed;
     box-shadow: none;
     border: 2px solid rgb(144, 144, 144);
-
     padding: 10px 20px;
     border-radius: 20px;
     display: flex;
@@ -169,28 +162,6 @@ body {
     margin-top: 10px;
     font-family: 'Amiri', serif;
 }
-/* 
-.soon {
-    margin: 10px;
-
-    background-color: rgb(216, 214, 214);
-    color: #666;
-    cursor: not-allowed;
-    box-shadow: none;
-    border: 2px solid rgb(144, 144, 144);
-
-    padding: 10px 20px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    width: auto;
-    text-align: center;
-    transition: box-shadow 0.3s ease;
-    margin-top: 10px;
-    font-family: 'Amiri', serif;
-} */
 
 .selected {
     box-shadow: 0 0 20px rgba(122, 48, 63, 0.8), 0 0 30px rgba(122, 48, 63, 04);
