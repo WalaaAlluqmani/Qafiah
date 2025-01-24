@@ -13,29 +13,22 @@
     text-align: left;
     border-bottom: 1px solid #c9c9c9;
     background-color: #ffffff;
-    /* لون الخلفية أبيض */
     margin: 0;
-    /* إزالة أي هوامش افتراضية */
     box-sizing: border-box;
-    /* التأكد من أخذ الحواف ضمن الحساب */
 }
 
 .header a {
     color: #104149;
-    /* لون النص */
     margin: 0 20px;
-    /* تقليل المسافة بين الروابط إلى 15px */
     font-size: x-large;
-    /* حجم النص كبير */
     text-decoration: none;
-    /* إزالة التسطير من الروابط */
     font-family: 'Amiri', serif;
 }
 
 .header a:hover {
     text-decoration: underline;
     color: #7A303F;
-}
+}  
 
 section {
     height: 100vh;
@@ -49,7 +42,7 @@ section {
 
 /* -------------------------- section 1 -------------------------- */
 
-#section1 {
+#home-page {
     /* background-image: url("static/images/index_interface/bk1.png"); تعيين صورة الخلفية */
     background-repeat: no-repeat;
     /* منع تكرار الصورة */
@@ -153,7 +146,7 @@ content {
 
 /* -------------------------- section 2 -------------------------- */
 
-#section2 {
+#generat-your-poem {
     background: #FBF9EC;
     height: 70vh;
 }
@@ -196,7 +189,7 @@ content {
 
 /* -------------------------- section 3 -------------------------- */
 
-#section3 {
+#about-us {
     background-image: url("pic/bk2.png");
     /* تعيين صورة الخلفية */
     background-repeat: no-repeat;
