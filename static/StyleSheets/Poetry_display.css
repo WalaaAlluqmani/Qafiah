@@ -141,7 +141,7 @@ html {
   background-color: #072A30;
   color: white;
   padding: 10px;
-  margin-top: 0.2%;
+  /* margin-top: 0.2%; */
   border-top: 1px solid #FBF9EC
 }
 
@@ -190,64 +190,6 @@ html {
 
 
 /* -------------------------- loading spinner -------------------------- */
-/* .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.918);
-  background-size: cover;
-  z-index: 1000;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  size: 20%;
-}
-
-.spinner {
-  width: 100px;
-  height: 100px;
-  background-image: url('/static/images/spinner.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  animation: move-and-scale 5s linear infinite;
-  z-index: 2;
-}
-
-.loading-text {
-  color: #072A30;
-  margin-top: 15px;
-  font-size: 18px;
-  font-family: 'Amiri', serif;
-  white-space: nowrap;
-  overflow: hidden;
-  position: relative;
-}
-
-@keyframes move-and-scale {
-  0% {
-      transform: translate(20%) scale(0.9);
-  }
-  20% {
-      transform: translate(20%) scale(1.1);
-  }
-  40% {
-      transform: translate(20%) scale(0.9);
-  }
-  60% {
-      transform: translate(20%) scale(1.2);
-  }
-  80% {
-    transform: translate(20%) scale(0.9);
-  }
-  100% {
-      transform: translate(20%) scale(1.1);
-  }
-} */
-
-
 .overlay {
   position: fixed;
   top: 0;

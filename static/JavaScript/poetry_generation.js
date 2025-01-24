@@ -40,9 +40,54 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// async function submitPoemForm(event) {
+//     event.preventDefault(); // Prevent default form submission
+//     const overlay = document.getElementById('overlay');
+//     overlay.style.display = 'flex'; // Show loading overlay
+
+//     const type = document.getElementById('selected-type').value;
+
+//     try {
+//         const response = await fetch("/generated-poetry", {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/x-www-form-urlencoded"
+//             },
+//             body: new URLSearchParams({ type }) // Send the type in the request body
+//         });
+
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! status: ${response.status}`);
+//         }
+
+//         const data = await response.text(); // Get the response as text
+//         // Redirect to the poetry display page with the generated poem
+//         document.open();
+//         document.write(data);
+//         document.close();
+//     } catch (error) {
+//         console.error('Error:', error);
+//         alert('حدث خطأ أثناء توليد القصيدة. يرجى المحاولة مرة أخرى.');
+//     } finally {
+//         overlay.style.display = 'none'; // Hide loading overlay
+//     }
+// }
+
+// function applyTashkeel(poem) {
+//     console.log('Applying Tashkeel to poem:', poem);
+//     $.getJSON("http://tahadz.com/mishkal/ajaxGet", { text: poem, action: "TashkeelText" });
+// }
+
+// $(document).ready(function () {
+//     const initialPoem = `{{ generated_poem }}`;
+//     applyTashkeel(initialPoem);
+// });
+
 function showSpinner() {
     console.log("Spinner is shown");
-    // Display the overlay with a spinner
     document.getElementById('overlay').style.display = 'flex'; 
 }
 
+function setType(type) {
+    document.getElementById('selected-type').value = type; // تعيين قيمة type
+}

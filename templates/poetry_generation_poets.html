@@ -18,6 +18,8 @@
     <link href="static\images\FavIcon.png" sizes="32x32" rel="icon" type="image/png">
     <!-- The page title -->
     <title>واجهة إختيار الشعراء | قافية</title>
+    <!-- To link the JS code to the interface -->
+    <script src="static/JavaScript/poetry_generation.js"></script>
 
 </head>
 
@@ -83,17 +85,6 @@
                 </div>
             </div>
 
-            <!-- <div class="col s12 m4">
-                <div class="material-card-soon">
-                    <div class="material-card-content">
-                        <img src="static/images/poetry_generation_interface/abo_alalaa.png" alt="صورة الشاعر ابو العلاء"
-                            width="278" height="288">
-                        <p>شاعرٌ ومُفكِّر وعالم لغوي ونحويٌّ وأديب وفيلسوف من كبار أعلام الحضارة الإسلاميَّة</p>
-                        <button class="material-btn-soon">ابو العلاء المعري</button>
-                    </div>
-                </div>
-            </div> -->
-
             <div class="col s12 m4">
                 <div class="material-card">
                     <div class="material-card-content">
@@ -101,18 +92,24 @@
                             width="180" height="250">
                         <p>شاعر مُجيد وأحد مفاخر الأدب لقِّب بشاعرِ العَرَب، ومالئ الدُّنيا وشاغل الناس، له مكانة سامية
                             لم تُتَح لغيره من شعراء العرب بعد الإسلام</p>
-                        <button class="material-btn">ابو الطيب المتنبي</button>
+                        <button class="material-btn" onclick="setType('ابو الطيب المتنبي')">ابو الطيب المتنبي</button>
                     </div>
                 </div>
             </div>
 
         </div>
 
+        <!-- button to go to the output interface to display the poem
+        <form id="poemForm" onsubmit="submitPoemForm(event)">
+            <input type="hidden" name="type" id="selected-type" value="">
+            <button type="submit" class="material-btn-last">إنشئ قصيدتك</button>
+        </form> -->
         <!-- button to go to the output interface to display the poem -->
-        <form action="/generate-poetry" method="post" onsubmit="showSpinner()">
+        <form action="/generated-poetry" id="form" method="post" onsubmit="showSpinner()">
             <input type="hidden" name="type" id="selected-type" value="">
             <button type="submit" class="material-btn-last">إنشئ قصيدتك</button>
         </form>
+
 
     </div>
 
@@ -133,9 +130,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- To link the JS code to the interface -->
-    <script src="static/JavaScript/poetry_generation.js"></script>
 
 </body>
 
