@@ -55,12 +55,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <!-- <link href="styles.css" rel="stylesheet"> -->
     <link href="{{ url_for('static', path='StyleSheets/index.css') }}" rel="stylesheet">
-    <title>الرئيسية | قافية</title>
+    <!-- Fav Icon -->
+    <link href="static\images\FavIcon.png" sizes="32x32" rel="icon" type="image/png">
     <script src="static/JavaScript/index.js"></script>
+    <title>الرئيسية | قافية</title>
 
     <style>
         #section1 {
-            background-image: url("static/images/index_interface/bk1.png");
+            background-image: url("static/images/index_interface/bg3.svg");
         }
 
         #section3 {
@@ -70,16 +72,15 @@
 </head>
 
 <body>
-
+    <!-- header -->
     <div class="header">
-        <nav>
-            <a href="#section1">الرئيسية</a>
-            <a href="#section2">أنشئ قصيدتك</a>
-            <!-- <a href="#section4">صنف قصيدتك</a> -->
-            <a href="#section3">نبذة عنا</a>
-        </nav>
-    </div>
 
+        <a href="#section1">الرئيسية</a>
+        <a href="#section2">أنشئ قصيدتك</a>
+        <!-- <a href="#section4">صنف قصيدتك</a> -->
+        <a href="#section3">نبذة عنا</a>
+
+    </div>
 
     <!-- Section 1 -->
 
@@ -97,27 +98,70 @@
 
     </section>
 
-    <!-- Image Separator between Section 1 and Section 2 -->
-    <img src="static/images/index_interface/spreate.png" alt="Separator Image" class="separator">
+    <!-- Image Separator between Section 1 and Section 2
+    <img src="static/images/index_interface/spreate.png" alt="Separator Image" class="separator"> -->
 
     <!-- Section 2 -->
 
-    <section id="section2">
+    <!-- <section id="section2">
         <div class="text-and-button2">
             <p>حسب ماذا تريد انشاء قصيدتك؟</p>
             <br>
             <a href='/select-genre'> <button>نوع الشعر</button></a>
             <a href='/select-poet'> <button>أسلوب شاعر</button></a>
         </div>
-    </section>
+    </section> -->
 
-    <!-- Image Separator between Section 2 and Section 3 -->
-    <img src="static/images/index_interface/spreate.png" alt="Separator Image" class="separator">
+    <section id="section2" class="my-section">
+        <img src="static/images/index_interface/spreate.png" alt="Separator Image" class="separator">
+        <div class="container">
+            <div class="material-title">حسب ماذا تريد انشاء قصيدتك؟</div>
+            <div class="button-container">
+                <a href='/select-poet'> <button class="material-btn">الشاعر</button></a>
+                <a href='/select-genre'> <button class="material-btn">نوع الشعر</button></a>
+            </div>
+        </div>
+        <img src="static/images/index_interface/spreate.png" alt="Separator Image" class="separator">
+    </section>
 
     <!-- Section 3 -->
 
     <section id="section3">
-        <div class="content2">
+        <div class="container">
+            <div class="row">
+
+                <div class="col">
+                    <div class="material-card">
+                        <img src="static/images/index_interface/fearther.png" alt="ريشه">
+                        <p>رهام فوزان المطرفي</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="material-card">
+                        <img src="static/images/index_interface/fearther.png" alt="ريشه">
+                        <p>خديجة علي العجمي</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="material-card">
+                        <img src="static/images/index_interface/fearther.png" alt="ريشه">
+                        <p>لينا علي اليماني</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="material-card">
+                        <img src="static/images/index_interface/fearther.png" alt="ريشه">
+                        <p>ولاء ملفي اللقماني</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div class="content2">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -156,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
     </section>
 
     <!-- footer -->
@@ -179,6 +223,19 @@
 
 
     <!-- Importing Materialize JavaScript library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
 
 </body>
 

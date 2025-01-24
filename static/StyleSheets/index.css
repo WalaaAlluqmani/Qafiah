@@ -3,6 +3,17 @@
 * {
   font-family: 'Amiri', serif;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* تخصيص شريط التمرير في Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #072A30 #d3d2d0c1;
+}
+
+
 /* -------------------------- header -------------------------- */
 /* تعديل الهيدر للتأكد من أن الخلفية بيضاء وإزالة الهوامش */
 .header {
@@ -14,21 +25,22 @@
     border-bottom: 1px solid #c9c9c9;
     background-color: #ffffff;
     margin: 0;
+    margin-top: 1px;
     box-sizing: border-box;
 }
 
 .header a {
     color: #104149;
     margin: 0 20px;
-    font-size: x-large;
+    margin-top: 1%;
+    font-size: 2.3rcap;
     text-decoration: none;
-    font-family: 'Amiri', serif;
 }
 
 .header a:hover {
     text-decoration: underline;
     color: #7A303F;
-}  
+}
 
 section {
     height: 100vh;
@@ -46,16 +58,11 @@ section {
     /* background-image: url("static/images/index_interface/bk1.png"); تعيين صورة الخلفية */
     background-repeat: no-repeat;
     /* منع تكرار الصورة */
-    background-size: contain;
+    background-size: cover;
     /* الحفاظ على حجم الصورة الطبيعي */
     background-position: center top;
-    /* وضع الصورة في منتصف الصفحة أعلى */
-    background-attachment: fixed;
-    /* تثبيت الخلفية أثناء التمرير */
     margin: 0;
-    /* إزالة الهوامش الافتراضية */
-    background-attachment: fixed;
-
+    margin-top: 0;
     height: 90vh;
     /* تأكد من أن القسم يأخذ الارتفاع الكامل للنافذة */
 }
@@ -88,15 +95,10 @@ content {
 
 .text-and-button {
     display: flex;
-    /* تفعيل Flexbox */
     flex-direction: column;
-    /* ترتيب النص والزر عموديًا */
     align-items: flex-start;
-    /* محاذاة النص إلى اليسار */
     margin-top: 40px;
-    /* رفع النص قليلاً لأسفل */
     text-align: right;
-    /* محاذاة النص إلى اليمين */
 }
 
 .text-and-button p {
@@ -104,23 +106,17 @@ content {
     font-size: 2rem;
     line-height: 2;
     margin: 0;
-    /* إزالة الهوامش السفلية لتجنب المسافات الزائدة */
     font-family: 'Amiri', serif;
 
 }
 
 .text-and-button .button-container {
     display: flex;
-    /* تفعيل Flexbox للزر */
     justify-content: flex-start;
-    /* وضع الزر بعد السطر الأخير */
     margin-top: -10px;
-    /* رفع الزر قليلاً */
     position: relative;
     left: -80%;
-    /* تحريك الزر قليلاً إلى اليسار */
     top: -40px;
-    /* تحريك الزر قليلاً إلى الأعلى */
 }
 
 .text-and-button button {
@@ -146,11 +142,75 @@ content {
 
 /* -------------------------- section 2 -------------------------- */
 
-#section2{
+#section2 {
     background: #FBF9EC;
-    height: 70vh;
+    height: 75vh;
+}
+.my-section {
+    position: relative; /* لتحديد موضع الصورة بشكل نسبي */
+    padding: 20px 0; /* حشوة داخلية للقسم */
 }
 
+.separator {
+    display: block; /* جعل الصورة عنصر كتلة */
+    width: 100%; /* عرض الصورة 100% من عرض القسم */
+    margin: 0; /* إزالة الحواف */
+}
+.separator {
+    position: absolute; /* تعيين الموضع المطلق */
+    left: 0; /* محاذاة إلى اليسار */
+    right: 0; /* محاذاة إلى اليمين */
+}
+
+.separator:first-of-type {
+    top: 0; /* وضع الصورة في الأعلى */
+}
+.separator:last-of-type {
+    bottom: 0; /* وضع الصورة في الأسفل */
+}
+.material-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #072A30;
+    font-size: 30px;
+    font-family: 'Amiri', serif;
+    text-align: center;
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto
+}
+.button-container {
+    display: flex; 
+    gap: 10px; 
+    justify-content: center; 
+    justify-items: center;
+}
+
+.material-btn {
+    padding: 15px 50px; 
+    font-size: 22px;
+    margin: 10px;
+    background-color: #7A303FFA;
+    color: white;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    font-family: 'Amiri', serif;
+}
+.material-btn:hover {
+    background-color: #7A303F;
+    color: white;
+    box-shadow: 0 0 20px rgba(122, 48, 63, 0.8), 0 0 30px rgba(122, 48, 63, 0.4);
+}
+
+/* 
 .text-and-button2 {
     flex: 1;
     text-align: center;
@@ -179,31 +239,22 @@ content {
 
 .text-and-button2 button:hover {
     box-shadow: 0 0 15px 5px #6f2c39;
-    /* الإضاءة */
+
 }
 
-/* لضمان مظهر جميل عند التركيز */
 .text-and-button2 button:focus {
     box-shadow: 0 0 15px 5px #dd5d77;
-}
+}*/
 
 /* -------------------------- section 3 -------------------------- */
 
 #section3 {
-    background-image: url("pic/bk2.png");
-    /* تعيين صورة الخلفية */
+    background-image: url("static/images/index_interface/bk.png");
     background-repeat: no-repeat;
-    /* منع تكرار الصورة */
     background-size: contain;
-    /* الحفاظ على حجم الصورة الطبيعي */
-    background-position: center top;
-    /* وضع الصورة في منتصف الصفحة أعلى */
+    background-position: right top;
     background-attachment: fixed;
-    /* تثبيت الخلفية أثناء التمرير */
     margin: 0;
-    /* إزالة الهوامش الافتراضية */
-    background-attachment: fixed;
-
     height: 80vh;
 }
 
@@ -227,81 +278,73 @@ content {
 }
 
 .row {
-    display: flex;
-    justify-content: space-around;
-    /* توزيع الكروت بالتساوي */
-    flex-wrap: wrap;
-    /* السماح بتعدد الصفوف عند الحاجة */
-    gap: 20px;
-    /* مسافة بين الكروت */
-    width: 100%;
-    /* عرض الصف بالكامل */
+        display: flex; /* استخدام flexbox للعناصر */
+        justify-content: center; /* تمركز العناصر أفقياً */
+        align-items: center; /* تمركز العناصر عمودياً (إذا كان هناك ارتفاع محدد) */
+        justify-items: center;
+        width: 100%; /* عرض الصف */
+        gap: 25px; /* المسافة بين العناصر */
+        flex-wrap: nowrap; /* يسمح للعناصر بالانتقال إلى السطر التالي عند الحاجة */
 }
 
 .col {
-    flex: 1 1 calc(25% - 40px);
-    /* جعل كل كرت يأخذ حوالي 25% من العرض مع المسافة */
-    max-width: calc(25% - 40px);
-    /* تحديد أقصى عرض للكرت */
-    box-sizing: border-box;
-    /* أخذ الحواف في الحسبان */
+        flex: 1; /* كل عمود يأخذ نفس المساحة */
+        max-width: calc(30% - 20px); /* زيادة الحد الأقصى لعرض العمود (يمكنك تعديل القيمة) */
+        box-sizing: border-box; /* ضمان احتساب الحدود والحشوات في العرض */
 }
 
 .material-card {
-    margin: 10px;
-    padding: 20px;
-    /* زيادة الحواف الداخلية للكرت */
+    width: 100%; /* يجعل البطاقة تأخذ كامل عرض العمود */
+    aspect-ratio: 1; /* يجعل البطاقة مربعة الشكل */
     border: 1px solid #AEA38A;
     border-radius: 10px;
     background-color: #FBF9EC;
-    transition: transform 0.3s ease;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    /* تحديد ارتفاع ثابت للكرت */
+    flex-direction: column; /* ترتيب المحتوى عمودياً */
+    align-items: center; /* محاذاة محتوى البطاقة عمودياً */
+    justify-content: center; /* محاذاة محتوى البطاقة أفقياً */
+    overflow: hidden; /* لإخفاء أي محتوى زائد */
+    padding: 10px; /* حشوة داخلية للبطاقة */
+    height: 200px; /* تحديد ارتفاع البطاقة (يمكنك تعديل القيمة) */
 }
+
 
 .material-card:hover {
     transform: scale(1.07);
     /* تكبير الكرت عند التمرير */
 }
 
-.material-card-content {
+
+.material-card img {
+    max-width: 80%;
+    height: auto; 
+    margin-bottom: 0;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.material-card p {
+    font-size: 18px;
+    font-family: 'Amiri';
+    font-weight: bold;
+    color: #072A30;
+    margin-top: 0; 
+    margin-bottom: 0; 
     text-align: center;
 }
 
-.material-card-content img {
-    width: 100%;
-    /* جعل الصورة تأخذ عرض الكرت */
-    height: auto;
-    border-radius: 8px;
-    max-height: 250px;
-    /* تحديد أقصى ارتفاع للصورة */
-    object-fit: cover;
-    /* قص الصورة إذا كانت أكبر من الحاوية */
-}
 
-.material-card-content p {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #072A30;
-}
+
 
 /* -------------------------- separator image -------------------------- */
 
-.separator {
+/* .separator {
     display: block;
     margin: 20px auto;
-    /* Center the image */
     max-width: 100%;
-    /* Ensure it fits the screen */
     height: auto;
-    /* Maintain aspect ratio */
 
-}
+} */
 
 /* -------------------------- footer -------------------------- */
 
