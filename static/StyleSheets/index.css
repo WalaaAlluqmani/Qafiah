@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+* {
+  font-family: 'Amiri', serif;
+}
+/* -------------------------- header -------------------------- */
+/* تعديل الهيدر للتأكد من أن الخلفية بيضاء وإزالة الهوامش */
+.header {
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #c9c9c9;
+    background-color: #ffffff;
+    /* لون الخلفية أبيض */
+    margin: 0;
+    /* إزالة أي هوامش افتراضية */
+    box-sizing: border-box;
+    /* التأكد من أخذ الحواف ضمن الحساب */
+}
+
+.header a {
+    color: #104149;
+    /* لون النص */
+    margin: 0 20px;
+    /* تقليل المسافة بين الروابط إلى 15px */
+    font-size: x-large;
+    /* حجم النص كبير */
+    text-decoration: none;
+    /* إزالة التسطير من الروابط */
+    font-family: 'Amiri', serif;
+}
+
+.header a:hover {
+    text-decoration: underline;
+    color: #7A303F;
+}
+
+section {
+    height: 100vh;
+    /* Each section takes the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+}
+
+/* -------------------------- section 1 -------------------------- */
+
+#section1 {
+    /* background-image: url("static/images/index_interface/bk1.png"); تعيين صورة الخلفية */
+    background-repeat: no-repeat;
+    /* منع تكرار الصورة */
+    background-size: contain;
+    /* الحفاظ على حجم الصورة الطبيعي */
+    background-position: center top;
+    /* وضع الصورة في منتصف الصفحة أعلى */
+    background-attachment: fixed;
+    /* تثبيت الخلفية أثناء التمرير */
+    margin: 0;
+    /* إزالة الهوامش الافتراضية */
+    background-attachment: fixed;
+
+    height: 90vh;
+    /* تأكد من أن القسم يأخذ الارتفاع الكامل للنافذة */
+}
+
+header,
+content {
+    position: relative;
+    /* تأكيد أن العناصر فوق الخلفية */
+    z-index: 1;
+    /* وضع هذه العناصر فوق الخلفية */
+}
+
+
+.content {
+    display: flex;
+    /* تفعيل Flexbox */
+    flex-direction: column;
+    /* ترتيب المحتوى عموديًا */
+    justify-content: center;
+    /* محاذاة في المنتصف عموديًا */
+    align-items: center;
+    /* محاذاة في المنتصف أفقيًا */
+    width: 100%;
+    /* ملء العرض بالكامل */
+    padding: 20px;
+    /* حواف داخلية */
+    box-sizing: border-box;
+    /* أخذ الحواف في الحساب */
+}
+
+.text-and-button {
+    display: flex;
+    /* تفعيل Flexbox */
+    flex-direction: column;
+    /* ترتيب النص والزر عموديًا */
+    align-items: flex-start;
+    /* محاذاة النص إلى اليسار */
+    margin-top: 40px;
+    /* رفع النص قليلاً لأسفل */
+    text-align: right;
+    /* محاذاة النص إلى اليمين */
+}
+
+.text-and-button p {
+    color: #104149;
+    font-size: 2rem;
+    line-height: 2;
+    margin: 0;
+    /* إزالة الهوامش السفلية لتجنب المسافات الزائدة */
+    font-family: 'Amiri', serif;
+
+}
+
+.text-and-button .button-container {
+    display: flex;
+    /* تفعيل Flexbox للزر */
+    justify-content: flex-start;
+    /* وضع الزر بعد السطر الأخير */
+    margin-top: -10px;
+    /* رفع الزر قليلاً */
+    position: relative;
+    left: -80%;
+    /* تحريك الزر قليلاً إلى اليسار */
+    top: -40px;
+    /* تحريك الزر قليلاً إلى الأعلى */
+}
+
+.text-and-button button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: #7A303F;
+    border: 1px solid #7A303F;
+    border-radius: 50px;
+    background: none;
+    cursor: pointer;
+    font-family: 'Amiri', serif;
+}
+
+.text-and-button button:hover {
+    background-color: #7A303F;
+    color: white;
+}
+
+.text-and-button button:hover {
+    background-color: #7A303F;
+    color: white;
+}
+
+/* -------------------------- section 2 -------------------------- */
+
+#section2 {
+    background: #FBF9EC;
+    height: 70vh;
+}
+
+.text-and-button2 {
+    flex: 1;
+    text-align: center;
+    padding: 0 30px;
+
+}
+
+.text-and-button2 p {
+    font-size: 3.5rem;
+    line-height: 2;
+    color: #072A30;
+    margin-bottom: 10px;
+    font-family: 'Amiri', serif;
+}
+
+.text-and-button2 button {
+    padding: 20px 60px;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    background-color: #7A303F;
+    cursor: pointer;
+    font-family: 'Amiri', serif;
+
+}
+
+.text-and-button2 button:hover {
+    box-shadow: 0 0 15px 5px #6f2c39;
+    /* الإضاءة */
+}
+
+/* لضمان مظهر جميل عند التركيز */
+.text-and-button2 button:focus {
+    box-shadow: 0 0 15px 5px #dd5d77;
+}
+
+/* -------------------------- section 3 -------------------------- */
+
+#section3 {
+    background-image: url("pic/bk2.png");
+    /* تعيين صورة الخلفية */
+    background-repeat: no-repeat;
+    /* منع تكرار الصورة */
+    background-size: contain;
+    /* الحفاظ على حجم الصورة الطبيعي */
+    background-position: center top;
+    /* وضع الصورة في منتصف الصفحة أعلى */
+    background-attachment: fixed;
+    /* تثبيت الخلفية أثناء التمرير */
+    margin: 0;
+    /* إزالة الهوامش الافتراضية */
+    background-attachment: fixed;
+
+    height: 80vh;
+}
+
+.container {
+    position: relative;
+    /* تأكيد أن العناصر فوق الخلفية */
+    z-index: 1;
+    /* وضع هذه العناصر فوق الخلفية */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    /* توزيع الكروت بالتساوي مع مسافات متساوية */
+    flex-wrap: wrap;
+    /* السماح بالتفاف الكروت إلى صفوف متعددة عند الحاجة */
+    gap: 20px;
+    /* إضافة مسافة بين الكروت */
+    padding: 20px;
+    /* حواف داخلية للمحتوى */
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    /* توزيع الكروت بالتساوي */
+    flex-wrap: wrap;
+    /* السماح بتعدد الصفوف عند الحاجة */
+    gap: 20px;
+    /* مسافة بين الكروت */
+    width: 100%;
+    /* عرض الصف بالكامل */
+}
+
+.col {
+    flex: 1 1 calc(25% - 40px);
+    /* جعل كل كرت يأخذ حوالي 25% من العرض مع المسافة */
+    max-width: calc(25% - 40px);
+    /* تحديد أقصى عرض للكرت */
+    box-sizing: border-box;
+    /* أخذ الحواف في الحسبان */
+}
+
+.material-card {
+    margin: 10px;
+    padding: 20px;
+    /* زيادة الحواف الداخلية للكرت */
+    border: 1px solid #AEA38A;
+    border-radius: 10px;
+    background-color: #FBF9EC;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    /* تحديد ارتفاع ثابت للكرت */
+}
+
+.material-card:hover {
+    transform: scale(1.07);
+    /* تكبير الكرت عند التمرير */
+}
+
+.material-card-content {
+    text-align: center;
+}
+
+.material-card-content img {
+    width: 100%;
+    /* جعل الصورة تأخذ عرض الكرت */
+    height: auto;
+    border-radius: 8px;
+    max-height: 250px;
+    /* تحديد أقصى ارتفاع للصورة */
+    object-fit: cover;
+    /* قص الصورة إذا كانت أكبر من الحاوية */
+}
+
+.material-card-content p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #072A30;
+}
+
+/* -------------------------- separator image -------------------------- */
+
+.separator {
+    display: block;
+    margin: 20px auto;
+    /* Center the image */
+    max-width: 100%;
+    /* Ensure it fits the screen */
+    height: auto;
+    /* Maintain aspect ratio */
+
+}
+
+/* -------------------------- footer -------------------------- */
+
+.footer {
+    background-color: #072A30;
+    color: white;
+    padding: 10px;
+}
+
+.footer .container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feather-icon {
+    width: 20px;
+    /* حجم الريشة */
+    margin-bottom: 2%;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+    justify-items: left;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+.footer-text {
+    text-align: right;
+    justify-content: right;
+    padding-right: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
