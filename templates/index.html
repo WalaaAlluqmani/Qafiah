@@ -58,7 +58,6 @@
     <title>الرئيسية | قافية</title>
     <script src="static/JavaScript/index.js"></script>
 
-
     <style>
         #section1 {
             background-image: url("static/images/index_interface/bk1.png");
@@ -71,27 +70,27 @@
 </head>
 
 <body>
-    
+
     <div class="header">
         <nav>
-        <a href="#home-page">الرئيسية</a>
-        <a href="#generat-your-poem">أنشئ قصيدتك</a>
-        <!-- <a href="#section4">صنف قصيدتك</a> -->
-        <a href="#about-us">نبذة عنا</a>
+            <a href="#section1">الرئيسية</a>
+            <a href="#section2">أنشئ قصيدتك</a>
+            <!-- <a href="#section4">صنف قصيدتك</a> -->
+            <a href="#section3">نبذة عنا</a>
         </nav>
     </div>
 
 
     <!-- Section 1 -->
 
-    <section id="home-page">
+    <section id="section1">
         <div class="content">
             <div class="text-and-button">
                 <p><span style="font-weight: bold;">قافيــة</span><br>إبداعك الشعري يبدأ هنا<br>حيث يلتقي الذكاء بالفن،
                     تولد الأبيات</p>
 
                 <div class="button-container">
-                    <button  onclick="scrollToSection()">انشئ قصيدتك الآن</button>
+                    <button onclick="scrollToSection()">انشئ قصيدتك الآن</button>
                 </div>
             </div>
         </div>
@@ -103,12 +102,12 @@
 
     <!-- Section 2 -->
 
-    <section id="generat-your-poem">
+    <section id="section2">
         <div class="text-and-button2">
             <p>حسب ماذا تريد انشاء قصيدتك؟</p>
             <br>
-            <button onclick="window.location.href='/select-genre'" >نوع الشعر</button>
-            <button onclick="window.location.href='/select-poet'" >أسلوب شاعر</button>
+            <a href='/select-genre'> <button>نوع الشعر</button></a>
+            <a href='/select-poet'> <button>أسلوب شاعر</button></a>
         </div>
     </section>
 
@@ -117,7 +116,7 @@
 
     <!-- Section 3 -->
 
-    <section id="about-us">
+    <section id="section3">
         <div class="content2">
             <div class="container">
                 <div class="row">

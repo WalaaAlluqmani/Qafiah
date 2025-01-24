@@ -34,7 +34,7 @@ async def generate_poetry(request: Request):
 async def generate_poetry(request: Request):
     return templates.TemplateResponse("poetry_generation_poets.html", {"request": request})
 
-@app.post("/generated-poetry", response_class=HTMLResponse)
+@app.post("/generate-poetry", response_class=HTMLResponse)
 async def generate_poetry(request: Request, type: str = Form(...)):
 
     line = "كسوتني حلة تبلى محاسنها"

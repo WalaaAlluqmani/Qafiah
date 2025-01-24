@@ -42,7 +42,7 @@ section {
 
 /* -------------------------- section 1 -------------------------- */
 
-#home-page {
+#section1 {
     /* background-image: url("static/images/index_interface/bk1.png"); تعيين صورة الخلفية */
     background-repeat: no-repeat;
     /* منع تكرار الصورة */
@@ -146,7 +146,7 @@ content {
 
 /* -------------------------- section 2 -------------------------- */
 
-#generat-your-poem {
+#section2{
     background: #FBF9EC;
     height: 70vh;
 }
@@ -189,7 +189,7 @@ content {
 
 /* -------------------------- section 3 -------------------------- */
 
-#about-us {
+#section3 {
     background-image: url("pic/bk2.png");
     /* تعيين صورة الخلفية */
     background-repeat: no-repeat;

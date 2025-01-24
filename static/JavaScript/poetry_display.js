@@ -11,7 +11,7 @@ async function regeneratePoem() {
     console.log('Selected type:', poemType);
 
     try {
-        const response = await fetch('/generated-poetry', {
+        const response = await fetch('/generate-poetry', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
