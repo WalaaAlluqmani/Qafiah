@@ -55,12 +55,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <!-- <link href="styles.css" rel="stylesheet"> -->
     <link href="{{ url_for('static', path='StyleSheets/index.css') }}" rel="stylesheet">
-    <title>home Page</title>
+    <title>الرئيسية | قافية</title>
+    <script src="static/JavaScript/index.js"></script>
+
 
     <style>
         #section1 {
             background-image: url("static/images/index_interface/bk1.png");
         }
+
         #section3 {
             background-image: url("static/images/index_interface/bk2.png");
         }
@@ -87,7 +90,7 @@
                     تولد الأبيات</p>
 
                 <div class="button-container">
-                    <button>انشئ قصيدتك الآن</button>
+                    <button  onclick="scrollToSection()">انشئ قصيدتك الآن</button>
                 </div>
             </div>
         </div>
@@ -103,8 +106,8 @@
         <div class="text-and-button2">
             <p>حسب ماذا تريد انشاء قصيدتك؟</p>
             <br>
-            <button>نوع الشعر</button>
-            <button>الشاعر</button>
+            <button onclick="window.location.href='/select-genre'" >نوع الشعر</button>
+            <button onclick="window.location.href='/select-poet'" >أسلوب شاعر</button>
         </div>
     </section>
 
