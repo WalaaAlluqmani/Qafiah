@@ -32,7 +32,7 @@
         <nav>
             <a href="/">الرئيسية</a>
             <a href="/">أنشئ قصيدتك</a>
-            <a href="/">صنف قصيدتك</a>
+            <!-- <a href="/">صنف قصيدتك</a> -->
             <a href="/">نبذة عنا</a>
         </nav>
         <div class="logo">
@@ -56,13 +56,12 @@
     </div> -->
         <div class="material-card">
             <div class="material-card-content">
-                <p id="generatedpoem"> {{ generated_poem }}</p>
+                <p id="generatedpoem"> {{ generated_poem }} </p>
             </div>
         </div>
         <input type="hidden" id="type" value="{{ type }}">
         <div>
-            <button class="material-btn-last" id="regenerateButton" onclick="regeneratePoem()">أعد إنشاء
-                القصيدة</button>
+            <button class="material-btn-last" id="regenerateButton" onclick="regeneratePoem()">أعد إنشاءالقصيدة</button>
         </div>
     </div>
 
@@ -84,6 +83,7 @@
     </footer>
 
     <script>
+
         async function regeneratePoem() {
             console.log('Regenerate poem button clicked.');
             const overlay = document.getElementById('overlay');
@@ -93,12 +93,13 @@
             console.log('Selected type:', poemType);
 
             try {
-                const response = await fetch('/generated-poetry', {
+                const response = await fetch('/generate-poetry', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
-                    body: new URLSearchParams({ type: poemType })
+                    body: new URLSearchParams({ type: poemType })  // نوع ثابت للتحقق
+
                 });
 
                 console.log('Response status:', response.status);
@@ -119,7 +120,6 @@
                 if (generatedPoemElement) {
                     applyTashkeel(poemText);
                     generatedPoemElement.textContent = poemText; // تحديث النص
-                    // applyTashkeel(poemText); // تطبيق التشكيل على النص
                 } else {
                     console.error('Element with id "generatedpoem" not found.');
                 }
@@ -133,6 +133,7 @@
         }
         function applyTashkeel(poem) {
             console.log('Applying Tashkeel to poem:', poem);
+            console.log(type);
             $.getJSON("http://tahadz.com/mishkal/ajaxGet", { text: poem, action: "TashkeelText" },
                 function (data) {
                     console.log('Tashkeel result:', data.result);
