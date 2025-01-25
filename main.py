@@ -23,6 +23,7 @@ templates = Jinja2Templates(directory="templates")
 # --------------------------------AraGPT-2 - madih ----------------------------------------------
 
 model_name= "WalaaAlluqmani/madih_model"
+# model_name= "gpt2-poemsss"
 model_madih = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer_madih = GPT2TokenizerFast.from_pretrained(model_name)
 
