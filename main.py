@@ -23,6 +23,7 @@ generation_mutnabi_pipeline = pipeline("text-generation", model=model_mutnabi, t
 # --------------------------------AraGPT2-madih ----------------------------------------------
 
 model_name= "WalaaAlluqmani/madih_model"
+# model_name= "gpt2-poemsss"
 model_madih = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer_madih = GPT2TokenizerFast.from_pretrained(model_name)
 
