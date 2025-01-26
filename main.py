@@ -93,7 +93,7 @@ def get_prompt(type: str) -> str:
             random_line = random.choice(lines).strip()
             return random_line
     elif type == "أبو الطيب المتنبي":
-        with open('prompts/prompts/prompt_mutnabi.txt', 'r', encoding='utf-8') as file:
+        with open('prompts/prompt_mutnabi.txt', 'r', encoding='utf-8') as file:
             lines = file.readlines()
             random_line = random.choice(lines).strip()
             return random_line
