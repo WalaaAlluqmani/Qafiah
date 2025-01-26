@@ -6,27 +6,28 @@ from fastapi.staticfiles import StaticFiles
 from transformers import GPT2TokenizerFast, GPT2LMHeadModel, pipeline
 import random
 
-logging.basicConfig(level=logging.INFO)
-
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # Models setup
+#-------------------------------------AraGPT2-mutnabi_model--------------------------------------------
 model_path = "WalaaAlluqmani/mutnabi_model"
 model_mutnabi = GPT2LMHeadModel.from_pretrained(model_path)
 tokenizer_mutnabi = GPT2TokenizerFast.from_pretrained(model_path)
-model_mutnabi.eval()
+
 
 generation_mutnabi_pipeline = pipeline("text-generation", model=model_mutnabi, tokenizer=tokenizer_mutnabi)
 
+#----------------------------------------AraGPT2-madih_model---------------------------------------------
 model_name = "WalaaAlluqmani/madih_model"
 model_madih = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer_madih = GPT2TokenizerFast.from_pretrained(model_name)
-model_madih.eval()
+
 
 generation_madih_pipeline = pipeline("text-generation", model=model_madih, tokenizer=tokenizer_madih)
 
+#-----------------------------------------------------------------------------------------------------
 # Routes
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
@@ -50,8 +51,6 @@ async def generate_poetry(request: Request, type: str = Form(...)):
         generated_poem = generate_poem_based_on_poet(prompt_text)
     else:
         raise HTTPException(status_code=400, detail="Invalid model type")
-    
-    logging.info(f"Generated poem for type '{type}': {generated_poem}")
     
     return templates.TemplateResponse("poetry_display.html", {"request": request, "generated_poem": generated_poem, "type": type})
 
