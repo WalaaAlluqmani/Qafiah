@@ -92,7 +92,7 @@
                             width="180" height="250">
                         <p>شاعر مُجيد وأحد مفاخر الأدب لقِّب بشاعرِ العَرَب، ومالئ الدُّنيا وشاغل الناس، له مكانة سامية
                             لم تُتَح لغيره من شعراء العرب بعد الإسلام</p>
-                        <button class="material-btn" onclick="setType('ابو الطيب المتنبي')">ابو الطيب المتنبي</button>
+                        <button class="material-btn" onclick="setType('أبو الطيب المتنبي')">أبو الطيب المتنبي</button>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
         <!-- button to go to the output interface to display the poem -->
         <form action="/generate-poetry" id="form" method="post" onsubmit="showSpinner()">
             <input type="hidden" name="type" id="selected-type" value="">
-            <button type="submit" class="material-btn-last">إنشئ قصيدتك</button>
+            <button type="submit" id="regenerateButton" class="material-btn-last">إنشئ قصيدتك</button>
         </form>
 
 
