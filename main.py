@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Request, Form
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from transformers import GPT2TokenizerFast, GPT2LMHeadModel, pipeline
@@ -23,9 +23,9 @@ generation_mutnabi_pipeline = pipeline("text-generation", model=model_mutnabi, t
 # --------------------------------AraGPT2-madih ----------------------------------------------
 
 model_name= "WalaaAlluqmani/madih_model"
-# model_name= "gpt2-poemsss"
 model_madih = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer_madih = GPT2TokenizerFast.from_pretrained(model_name)
+model_madih.eval()
 
 generation_madih_pipeline = pipeline("text-generation", model=model_madih, tokenizer=tokenizer_madih)
 
@@ -46,12 +46,12 @@ async def generate_poetry(request: Request):
 @app.post("/generate-poetry", response_class=HTMLResponse)
 async def generate_poetry(request: Request, type: str = Form(...)):
 
-    line = prompt(type)
+    prompt = prompt(type)
 
     if type == "مدح":
-        generatedpoem = generatePoem_BasedonGenre(line)
+        generatedpoem = generatePoem_BasedonGenre(prompt)
     elif type == "أبو الطيب المتنبي":
-        generatedpoem = generatePoem_BasedonPoet(line)
+        generatedpoem = generatePoem_BasedonPoet(prompt)
     else:
         raise HTTPException(status_code=400, detail="Invalid model type")
     
