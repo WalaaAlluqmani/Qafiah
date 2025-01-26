@@ -1,3 +1,4 @@
+
 import logging
 from fastapi import FastAPI, HTTPException, Request, Form
 from fastapi.responses import HTMLResponse
@@ -5,6 +6,11 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from transformers import GPT2TokenizerFast, GPT2LMHeadModel, pipeline
 import random
+
+
+# Set up logging configuration
+logging.basicConfig(level=logging.WARNING)
+
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -15,7 +21,7 @@ templates = Jinja2Templates(directory="templates")
 model_path = "WalaaAlluqmani/mutnabi_model"
 model_mutnabi = GPT2LMHeadModel.from_pretrained(model_path)
 tokenizer_mutnabi = GPT2TokenizerFast.from_pretrained(model_path)
-
+model_mutnabi.eval()
 
 generation_mutnabi_pipeline = pipeline("text-generation", model=model_mutnabi, tokenizer=tokenizer_mutnabi)
 
@@ -23,11 +29,12 @@ generation_mutnabi_pipeline = pipeline("text-generation", model=model_mutnabi, t
 model_name = "WalaaAlluqmani/madih_model"
 model_madih = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer_madih = GPT2TokenizerFast.from_pretrained(model_name)
-
+model_madih.eval()
 
 generation_madih_pipeline = pipeline("text-generation", model=model_madih, tokenizer=tokenizer_madih)
 
 #-----------------------------------------------------------------------------------------------------
+
 # Routes
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
