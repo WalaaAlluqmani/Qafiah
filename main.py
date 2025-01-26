@@ -10,7 +10,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
-# --------------------------------AraGPT-2 - mutnabi ----------------------------------------------
+# --------------------------------AraGPT2-mutnabi ----------------------------------------------
 
 model_path = "WalaaAlluqmani/mutnabi_model"
 model_mutnabi = GPT2LMHeadModel.from_pretrained(model_path)
