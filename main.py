@@ -1,14 +1,9 @@
-import logging
 from fastapi import FastAPI, HTTPException, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from transformers import GPT2TokenizerFast, GPT2LMHeadModel, pipeline
 import random
-
-
-# Set up logging configuration
-logging.basicConfig(level=logging.WARNING)
 
 
 app = FastAPI()
