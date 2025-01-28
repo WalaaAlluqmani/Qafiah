@@ -277,6 +277,11 @@ content {
     /* حواف داخلية للمحتوى */
 }
 
+.container p {
+    text-align: center;
+    justify-content: center;
+}
+
 .row {
         display: flex; /* استخدام flexbox للعناصر */
         justify-content: center; /* تمركز العناصر أفقياً */
