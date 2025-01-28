@@ -47,4 +47,10 @@ function showSpinner() {
 function setType(type) {
     console.log("Selected type:", type);
     document.getElementById('selected-type').value = type; // تعيين قيمة type
+    scrollToButton();
+}
+
+function scrollToButton() {
+    const button = document.getElementById('regenerateButton');
+    button.scrollIntoView({ behavior: 'smooth' });
 }
