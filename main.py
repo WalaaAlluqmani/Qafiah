@@ -60,10 +60,10 @@ def generate_poem_based_on_poet(prompt: str) -> str:
     generated_poem = generation_mutnabi_pipeline(
         prompt,
         pad_token_id=tokenizer_mutnabi.eos_token_id,
-        num_beams=6,
+        num_beams=7,
         max_length=50,
         top_p=0.95,
-        temperature=0.7,
+        temperature=0.8,
         repetition_penalty=3.0,
         no_repeat_ngram_size=3,
         early_stopping=True,
@@ -76,11 +76,11 @@ def generate_poem_based_on_genre(prompt: str) -> str:
         prompt,
         pad_token_id=tokenizer_madih.eos_token_id,
         num_beams=6,
-        max_length=50,
+        max_length=30,
         top_p=0.95,
         temperature=0.7,
         repetition_penalty=3.0,
-        no_repeat_ngram_size=3,
+        no_repeat_ngram_size=4,
         early_stopping=True,
         truncation=True
     )[0]['generated_text']

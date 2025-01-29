@@ -12,18 +12,14 @@ html {
   background-color: #F4EDDB;
 }
 
-/* تخصيص شريط التمرير في Chrome وSafari */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* تخصيص شريط التمرير في Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: #072A30 #d3d2d0c1;
 }
-
-
 
 .header {
   display: flex;
@@ -81,12 +77,11 @@ html {
   height: 100%;
   left: 0;
   top: 0.5%;
-  background: url("/static/images/poetry_display_interface/B1.svg") no-repeat center center;
+  background: url("/static/images/poetry_display_interface/good.svg") no-repeat center center;
   background-size: cover;
   z-index: -1;
   border-bottom: 1px solid #AEA38A;
 }
-
 
 .material-card {
   width: 40%;
@@ -94,13 +89,13 @@ html {
   padding: 20px;
   border: 1px solid #AEA38A;
   border-radius: 10px;
-  /* background-color: #D4CCC1; */
   background-color: #eae6e0;
   text-align: center;
   justify-content: center;
   margin-top: 12%;
   margin-bottom: 4%;
   box-shadow: 0 0 20px rgba(19, 19, 19, 0.4);
+
 }
 
 .material-card-content {
@@ -109,7 +104,7 @@ html {
   align-items: center;
   justify-content: center;
 }
-
+ 
 .material-btn-last {
   border: 2px solid #7A303F;
   padding: 10px 20px;
@@ -141,7 +136,6 @@ html {
   background-color: #072A30;
   color: white;
   padding: 10px;
-  /* margin-top: 0.2%; */
   border-top: 1px solid #FBF9EC
 }
 
@@ -196,47 +190,47 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.95); /* خلفية سوداء شفافة */
+  background-color: rgba(255, 255, 255, 0.95); 
   background-size: cover;
-  z-index: 1; /* التأكد من أن الخلفية تحت السبانر */
-  display: none; /* إخفاء السبانر افتراضيًا */
-  justify-content: center; /* توسيط العمود */
-  align-items: center; /* توسيط الصف */
-  flex-direction: column; /* تنظيم العناصر عمودياً */
+  z-index: 1;
+  display: none; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
 }
 .spinner {
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
+  width: 100px; 
+  height: 100px; 
   background-image: url('/static/images/spinner.png');
   background-size: contain;
   background-repeat: no-repeat;
-  animation: check-check 1.5s infinite; /* تأثير تشيك تشيك */
-  z-index: 2; /* التأكد من أن السبانر فوق الخلفية */
+  animation: check-check 1.5s infinite; 
+  z-index: 1000; 
 }
 .loading-text {
-  color: rgb(40, 40, 40); /* لون النص */
-  margin-top: 15px; /* مسافة بين السبانر والنص */
-  font-size: 18px; /* حجم النص */
-  white-space: nowrap; /* منع التفاف النص */
-  overflow: hidden; /* إخفاء النص الزائد */
-  position: relative; /* لجعل النقاط متعلقة بالنص */
+  color: rgb(40, 40, 40); 
+  margin-top: 15px; 
+  font-size: 18px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  position: relative; 
 }
 
 @keyframes check-check {
   0%, 100% {
-      transform: translate(0) scale(1); /* البداية والنهاية في المنتصف */
-      opacity: 1; /* رؤية كاملة */
+      transform: translate(0) scale(1); 
+      opacity: 1; 
   }
   25% {
-      transform: translate(20px) scale(1.1); /* الحركة لليمين مع تكبير طفيف */
-      opacity: 1; /* شفافية أقل */
+      transform: translate(20px) scale(1.1); 
+      opacity: 1; 
   }
   50% {
-      transform: translate(-20px) scale(1); /* الحركة لليسار مع العودة للحجم الأصلي */
-      opacity: 1; /* شفافية أقل */
+      transform: translate(-20px) scale(1); 
+      opacity: 1; 
   }
   75% {
-      transform: translate(20px) scale(1.1); /* الحركة لليمين مرة أخرى مع تكبير طفيف */
-      opacity: 0.8; /* شفافية أقل */
+      transform: translate(20px) scale(1.1);
+      opacity: 0.8; 
   }
 }

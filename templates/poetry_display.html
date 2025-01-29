@@ -1,4 +1,3 @@
-<!-- poetry_display.html: لعرض الشعر المولد -->
 <!DOCTYPE html>
 <html lang="ar">
 
@@ -27,12 +26,10 @@
         </div>
     </div>
 
-    <!-- الهيدر -->
     <div class="header">
         <nav>
             <a href="/">الرئيسية</a>
             <a href="/">أنشئ قصيدتك</a>
-            <!-- <a href="/">صنف قصيدتك</a> -->
             <a href="/">نبذة عنا</a>
         </nav>
         <div class="logo">
@@ -44,16 +41,6 @@
 
     <div class="container">
         <div class="image-bg"></div>
-        <!-- <div class="material-card">
-            <div class="material-card-content">
-                <p>إن كان لي وطن، فوجهك وطني</p>
-                <p>وإن كان لي دار، فحبك داري</p>
-                <p>إن كان لي وطن، فوجهك وطني</p>
-
-            </div>
-        </div>
-        <button class="material-btn-last" onclick="showSpinner()">أعد إنشاء القصيدة</button>
-    </div> -->
         <div class="material-card">
             <div class="material-card-content">
                 <p id="generatedpoem"> {{ generated_poem }} </p>
@@ -98,7 +85,7 @@
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
-                    body: new URLSearchParams({ type: poemType })  // نوع ثابت للتحقق
+                    body: new URLSearchParams({ type: poemType })  
 
                 });
 
@@ -111,7 +98,6 @@
                 const data = await response.text();
                 console.log('Generated poem:', data);
 
-                // تحقق مما إذا كانت الاستجابة تحتوي على HTML
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(data, 'text/html');
                 const poemText = doc.querySelector('#generatedpoem') ? doc.querySelector('#generatedpoem').textContent : data;
@@ -119,7 +105,7 @@
                 const generatedPoemElement = document.getElementById('generatedpoem');
                 if (generatedPoemElement) {
                     applyTashkeel(poemText);
-                    generatedPoemElement.textContent = poemText; // تحديث النص
+                    generatedPoemElement.textContent = poemText; 
                 } else {
                     console.error('Element with id "generatedpoem" not found.');
                 }
@@ -128,7 +114,7 @@
                 console.error('Error:', error.message);
                 alert('حدث خطأ أثناء توليد القصيدة. يرجى المحاولة مرة أخرى.');
             } finally {
-                overlay.style.display = 'none'; // إخفاء السبانر بعد انتهاء التحميل
+                overlay.style.display = 'none'; 
             }
         }
         function applyTashkeel(poem) {

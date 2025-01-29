@@ -31,7 +31,7 @@
         <div class="spinner"></div>
         <div class="loading-text">
             ... جاري إنشاء القصيدة
-        </div> <!-- نص التحميل -->
+        </div> 
     </div>
 
     <!-- header -->
@@ -40,7 +40,6 @@
         <nav>
             <a href="/">الرئيسية</a>
             <a href="/">أنشئ قصيدتك</a>
-            <!-- <a href="/">صنف قصيدتك</a> -->
             <a href="/">نبذة عنا</a>
         </nav>
         <div class="logo">
@@ -60,7 +59,6 @@
 
             <div class="col s12 m4">
                 <div class="material-card-soon">
-                    <!-- <div class="material-card-soon "> -->
                     <div class="material-card-content">
                         <img src="static/images/poetry_generation_interface/ibn_alromi.png" alt="صورة الشاعر ابن الرومي"
                             width="194" height="270">
@@ -69,7 +67,6 @@
                             الهجاء برسم صور ساخرة قاسية تثير الضحك</p>
                         <button class="material-btn-soon">ابن الرومي</button>
                     </div>
-                    <!-- </div> -->
                 </div>
             </div>
 
@@ -98,12 +95,6 @@
             </div>
 
         </div>
-
-        <!-- button to go to the output interface to display the poem
-        <form id="poemForm" onsubmit="submitPoemForm(event)">
-            <input type="hidden" name="type" id="selected-type" value="">
-            <button type="submit" class="material-btn-last">إنشئ قصيدتك</button>
-        </form> -->
 
         <!-- button to go to the output interface to display the poem -->
         <form action="/generate-poetry" id="form" method="post" onsubmit="showSpinner()">

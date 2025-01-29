@@ -114,7 +114,6 @@ body {
 }
 
 .material-card-content img {
-    /* width: 100%; */
     height: auto;
     border-radius: 8px;
     text-align: center;
@@ -284,47 +283,47 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.95); /* خلفية سوداء شفافة */
+    background-color: rgba(255, 255, 255, 0.95); 
     background-size: cover;
-    z-index: 1; /* التأكد من أن الخلفية تحت السبانر */
-    display: none; /* إخفاء السبانر افتراضيًا */
-    justify-content: center; /* توسيط العمود */
-    align-items: center; /* توسيط الصف */
-    flex-direction: column; /* تنظيم العناصر عمودياً */
+    z-index: 1; 
+    display: none; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
 }
 .spinner {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
+    width: 100px; 
+    height: 100px; 
     background-image: url('/static/images/spinner.png');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: check-check 1.5s infinite; /* تأثير تشيك تشيك */
-    z-index: 2; /* التأكد من أن السبانر فوق الخلفية */
+    animation: check-check 1.5s infinite; 
+    z-index: 2; 
 }
 .loading-text {
-    color: rgb(40, 40, 40); /* لون النص */
-    margin-top: 15px; /* مسافة بين السبانر والنص */
-    font-size: 18px; /* حجم النص */
-    white-space: nowrap; /* منع التفاف النص */
-    overflow: hidden; /* إخفاء النص الزائد */
-    position: relative; /* لجعل النقاط متعلقة بالنص */
+    color: rgb(40, 40, 40); 
+    margin-top: 15px; 
+    font-size: 18px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    position: relative; 
 }
 
 @keyframes check-check {
     0%, 100% {
-        transform: translate(0) scale(1); /* البداية والنهاية في المنتصف */
-        opacity: 1; /* رؤية كاملة */
+        transform: translate(0) scale(1); 
+        opacity: 1; 
     }
     25% {
-        transform: translate(20px) scale(1.1); /* الحركة لليمين مع تكبير طفيف */
-        opacity: 1; /* شفافية أقل */
+        transform: translate(20px) scale(1.1); 
+        opacity: 1; 
     }
     50% {
-        transform: translate(-20px) scale(1); /* الحركة لليسار مع العودة للحجم الأصلي */
-        opacity: 1; /* شفافية أقل */
+        transform: translate(-20px) scale(1); 
+        opacity: 1; 
     }
     75% {
-        transform: translate(20px) scale(1.1); /* الحركة لليمين مرة أخرى مع تكبير طفيف */
-        opacity: 0.8; /* شفافية أقل */
+        transform: translate(20px) scale(1.1); 
+        opacity: 0.8; 
     }
 }
