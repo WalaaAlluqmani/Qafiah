@@ -223,6 +223,7 @@ content {
 .container p {
     text-align: center;
     justify-content: center;
+    color:#104149
 }
 
 .row {
