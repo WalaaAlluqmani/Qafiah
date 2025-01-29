@@ -220,6 +220,11 @@ content {
     padding: 20px;
 }
 
+.container p {
+    text-align: center;
+    justify-content: center;
+}
+
 .row {
         display: flex; 
         justify-content: center; 
